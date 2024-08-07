@@ -1,0 +1,66 @@
+@import "mixin";
+
+.home-hero {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(70);
+  }
+  ._container {
+    > img {
+      height: auto;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(50) rem(30);
+    background: #ffffff;
+    border-radius: rem(10);
+    margin-bottom: rem(15);
+    @media (max-width: rem(992)) {
+      padding: rem(30) rem(20);
+      flex-direction: column;
+    }
+    h1 {
+      color: #0d0d0d;
+      font-size: rem(40);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: left;
+      margin: 0 0 rem(30) 0;
+      span {
+        color: #08ac34;
+      }
+      @media (max-width: rem(992)) {
+        font-size: rem(32);
+      }
+    }
+    h2 {
+      color: #0d0d0d;
+      font-size: rem(16);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: right;
+      margin: 0 0 rem(15) 0;
+      > span {
+        > span {
+          color: #08ac34;
+        }
+      }
+      @media (max-width: rem(992)) {
+        text-align: left;
+        padding-right: rem(50);
+        margin-top: rem(20);
+      }
+    }
+    .right {
+      > div {
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: rem(992)) {
+          display: none;
+        }
+      }
+    }
+  }
+}
