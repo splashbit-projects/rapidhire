@@ -63,7 +63,7 @@ const HomeHero = () => {
             </motion.div>
           </div>
         </div>
-        <Image src="/images/home/homeHero.webp" width={1110} height={400} />
+        <Image src="/images/home/homeHero.png" width={1110} height={400} />
       </div>
     </section>
   );
