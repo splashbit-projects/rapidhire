@@ -14,7 +14,7 @@ const Footer = () => {
               <img src="/images/logo-white.svg" alt="logo" />
             </Link>
             <p>
-              Rapidhire LTD HR HK: tailored HR <br />
+              Rapid HR Connect: tailored HR <br />
               solutions for your business
             </p>
             <div className="address">
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
       <div className="foot-bottom">
         <div className="_container">
-          © {currentYear} Rapidhire LTD HR HK. All Rights Reserved.
+          © {currentYear} Rapid HR Connect. All Rights Reserved.
         </div>
       </div>
     </footer>
