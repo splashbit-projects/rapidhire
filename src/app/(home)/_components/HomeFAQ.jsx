@@ -35,7 +35,7 @@ const HomeFAQ = () => {
             text="If you're struggling with recruitment, our Recruitment Assistance service can help. Partnering with our sister company, The Recruitment Consultants, we help find and attract top talent that fits your business needs."
           />
           <Accordion
-            title="We need to update our HR policies but don't know where to start. Can you help?"
+            title="We need to update our HR policies, but we don't know where to start. Can you help?"
             text="Updating HR policies can be complex. Our HR Documentation service offers comprehensive support for creating and refining policies, handbooks, and employment contracts, ensuring they meet legal requirements and align with your company's needs."
           />
         </div>

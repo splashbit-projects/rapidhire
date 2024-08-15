@@ -25,7 +25,7 @@ const HomeBuzzwords = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              You're busy running your business—don't waste time with vague
+              You're busy running your business — don't waste time with vague
               promises and jargon. At Rapidhire LTD HR HK, we provide actionable
               HR support that's both straightforward and effective.
             </motion.p>
@@ -38,7 +38,7 @@ const HomeBuzzwords = () => {
               From everyday advice to comprehensive HR project management, we
               focus on delivering real results. We help you recruit, develop,
               and manage a high-performing team that drives your business
-              forward—no fluff, just results.
+              forward — no fluff, just results.
             </motion.p>
             <div className="divider"></div>
             <motion.h4

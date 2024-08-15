@@ -62,7 +62,7 @@ const HomeRisks = () => {
             >
               <span>40%</span>
               <p>
-                Small businesses face compliance issues due to lack of HR
+                Small businesses face compliance issues due to a lack of HR
                 expertise, resulting in costly fines
               </p>
             </motion.div>
@@ -74,8 +74,8 @@ const HomeRisks = () => {
             >
               <span>20%</span>
               <p>
-                Businesses without HR support face lower employee
-                satisfaction,and performance.
+                Businesses without HR support face lower employee satisfaction
+                and performance.
               </p>
             </motion.div>
           </div>
