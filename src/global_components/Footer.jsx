@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="foot-top">
         <div className="_container">
           <div>
-            <Link href="#">
+            <Link href="/">
               <img src="/images/logo-white.svg" alt="logo" />
             </Link>
             <p>
@@ -35,6 +35,7 @@ const Footer = () => {
           </div>
           <div>
             <span></span>
+            <Link href="/our-approach">Our approach</Link>
             <Link href="#">Guides and insights</Link>
             <Link href="#">Why choose us</Link>
             <Link href="#">Get in touch</Link>
