@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
       <div className="foot-bottom">
         <div className="_container">
-          © {currentYear} Rapid HR Connect. All Rights Reserved.
+          © {currentYear} Rapidhire LTD HR HK. All Rights Reserved.
         </div>
       </div>
     </footer>
