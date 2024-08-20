@@ -6,10 +6,10 @@ import KeyBenefits from "../_services_components/KeyBenefits";
 import ServicesLoop from "../_services_components/ServicesLoop";
 import ServicePricing from "../_services_components/ServicePricing";
 import { keyBenefits, services } from "@/lib/services/HRProjectManagement_Data";
+import Packages from "../_services_components/Packages";
+import { packages } from "@/lib/services/packages";
 
 const HRProjectManagement = () => {
-  
-
   return (
     <>
       <ServiceHero
@@ -24,6 +24,7 @@ const HRProjectManagement = () => {
       />
       <KeyBenefits benefits={keyBenefits} />
       <ServicesLoop services={services} category={"HR Project Management"} />
+      <Packages title={"HR Support Packages"} packages={packages} />
       <ServicePricing
         text={
           "Want to know more about our HR Project Management service? <br/>Download our detailed pricing guide to explore how we can support your HR projects from start to finish."

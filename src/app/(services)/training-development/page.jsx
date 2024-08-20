@@ -6,6 +6,8 @@ import KeyBenefits from "../_services_components/KeyBenefits";
 import ServicesLoop from "../_services_components/ServicesLoop";
 import ServicePricing from "../_services_components/ServicePricing";
 import { keyBenefits, services } from "@/lib/services/TrainingDevelopment_Data";
+import Packages from "../_services_components/Packages";
+import { packages } from "@/lib/services/packages";
 
 const TrainingDevelopment = () => {
   return (
@@ -22,6 +24,7 @@ const TrainingDevelopment = () => {
       />
       <KeyBenefits benefits={keyBenefits} />
       <ServicesLoop services={services} category={"Training & Development"} />
+      <Packages title={"HR Support Packages"} packages={packages} />
       <ServicePricing
         text={
           "Interested in learning more about our Training & Development programs? <br/>Download our detailed pricing guide to explore the full range of our offerings and find the perfect solution for your business."

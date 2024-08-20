@@ -7,6 +7,7 @@ import ServicesLoop from "../_services_components/ServicesLoop";
 import ServicePricing from "../_services_components/ServicePricing";
 import { keyBenefits, services } from "@/lib/services/RetaindeHRSupport_Data";
 import { packages } from "@/lib/services/packages";
+import Packages from "../_services_components/Packages";
 
 const RetainedHRSupport = () => {
   return (
@@ -23,6 +24,7 @@ const RetainedHRSupport = () => {
       />
       <KeyBenefits benefits={keyBenefits} />
       <ServicesLoop services={services} category={"Retained HR Support"} />
+      <Packages title={"HR Support Packages"} packages={packages} />
       <ServicePricing
         text={
           "Interested in learning more about our Retained HR Support service? <br/>Download our detailed pricing guide to see how we can provide tailored HR solutions that fit your budget."
