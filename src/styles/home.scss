@@ -67,9 +67,11 @@
 
 .home-solutions {
   margin: rem(100) 0;
+  overflow: hidden;
   @media (max-width: rem(992)) {
     margin: rem(70) 0;
   }
+
 
   &__body {
     margin-top: rem(50);

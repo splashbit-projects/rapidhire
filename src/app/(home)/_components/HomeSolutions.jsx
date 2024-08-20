@@ -46,7 +46,7 @@ const HomeSolutions = () => {
                   department, tailored to your business needs at a fraction of
                   the cost.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/retained-hr-support" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
@@ -71,7 +71,7 @@ const HomeSolutions = () => {
                   efficiently handle significant HR initiatives and ensure
                   successful outcomes.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/hr-project-management" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
@@ -95,7 +95,7 @@ const HomeSolutions = () => {
                   Gain on-demand HR insights and solutions for immediate and
                   specific challenges without long-term commitments.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/flexible-hr-consultancy" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
@@ -130,7 +130,7 @@ const HomeSolutions = () => {
                   Leverage our partnership with expert recruiters to identify
                   and secure the best talent to drive your business forward.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/recruitment-assistance" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
@@ -154,7 +154,7 @@ const HomeSolutions = () => {
                   Enhance your team's skills and motivation with targeted
                   workshops and one-on-one coaching designed for growth.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/training-development" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
@@ -179,7 +179,7 @@ const HomeSolutions = () => {
                   documentation that support compliance and operational
                   consistency.
                 </p>
-                <Link href="#" className="main-button">
+                <Link href="/hr-documentation" className="main-button">
                   <span>Learn more</span>
                   <ButtonArrow />
                 </Link>
