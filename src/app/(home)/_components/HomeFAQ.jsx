@@ -24,7 +24,7 @@ const HomeFAQ = () => {
         <div className="home-faq__body">
           <Accordion
             title="How can I improve employee engagement in my company?"
-            text="Employee engagement is crucial for productivity and retention. At Rapidhire LTD HR HK, our Training & Development services offer tailored workshops and coaching to boost employee motivation and engagement. We help create a positive work environment where your team thrives."
+            text="Employee engagement is crucial for productivity and retention. At Rapidhire LTD, our Training & Development services offer tailored workshops and coaching to boost employee motivation and engagement. We help create a positive work environment where your team thrives."
           />
           <Accordion
             title="We're experiencing high employee turnover. What can we do to address this?"

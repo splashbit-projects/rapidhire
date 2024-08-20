@@ -22,7 +22,7 @@ const HomeSolutions = () => {
           <h2>
             People problems can slow your business.
             <br />
-            Whatever HR issue you face, <span>Rapidhire has the solution.</span>
+            Whatever HR issue you face, <span>Rapid HR Connect has the solution.</span>
           </h2>
         </motion.div>
         <div className="home-solutions__body">

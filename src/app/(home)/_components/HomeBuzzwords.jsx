@@ -26,7 +26,7 @@ const HomeBuzzwords = () => {
               variants={fadeInUp}
             >
               You're busy running your business — don't waste time with vague
-              promises and jargon. At Rapidhire LTD HR HK, we provide actionable
+              promises and jargon. At Rapidhire LTD, we provide actionable
               HR support that's both straightforward and effective.
             </motion.p>
             <motion.p

@@ -7,7 +7,7 @@ import Preloader from "@/global_components/Preloader";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Rapidhire",
+  title: "Rapid HR Connect",
   description: "",
 };
 
