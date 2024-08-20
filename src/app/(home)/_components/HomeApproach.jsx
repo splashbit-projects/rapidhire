@@ -103,7 +103,7 @@ const HomeApproach = () => {
           variants={fadeInUp}
           className="button-wrap"
         >
-          <Link href="#" className="main-button">
+          <Link href="/our-approach" className="main-button">
             <span>Explore our approach</span>
             <ButtonArrow />
           </Link>
