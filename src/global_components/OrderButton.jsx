@@ -3,7 +3,7 @@ import React from "react";
 import { usePopup } from "@/context/PopupsContext";
 import ButtonArrow from "@/icons/ButtonArrow";
 
-function OrderButton({ serviceName }) {
+function OrderButton({ text, serviceName }) {
   const { setOrderPopupDisplay, setServiceValue } = usePopup();
 
   const orderPopupOpen = () => {
@@ -13,7 +13,7 @@ function OrderButton({ serviceName }) {
   return (
     <>
       <button className="main-button" onClick={() => orderPopupOpen()}>
-        <span>Order</span>
+        <span>{text ? text : "Order"}</span>
         <ButtonArrow />
       </button>
     </>

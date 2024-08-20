@@ -38,7 +38,7 @@ const Packages = ({ title, packages }) => {
                 <div dangerouslySetInnerHTML={{ __html: pack.included }} />
               </div>
 
-              <OrderButton serviceName={pack.title} />
+              <OrderButton text={"Order now"} serviceName={pack.title} />
             </motion.div>
           ))}
         </div>
