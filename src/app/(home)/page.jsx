@@ -21,7 +21,12 @@ export default function Home() {
       <HomeBuzzwords />
       <HomeTools />
       <HomeFAQ />
-      <BookConsultation />
+      <BookConsultation
+        title={"Ready to Improve Your HR?"}
+        text={
+          "Schedule a free consultation to discuss your HR <br />needs and discover how our services can help <br />your business succeed."
+        }
+      />
     </>
   );
 }

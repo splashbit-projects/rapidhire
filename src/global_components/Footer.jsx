@@ -26,8 +26,8 @@ const Footer = () => {
           </div>
           <div>
             <span></span>
-            <Link href="#">Retained HR Support</Link>
-            <Link href="#">HR Project Management</Link>
+            <Link href="/retained-hr-support">Retained HR Support</Link>
+            <Link href="/hr-project-management">HR Project Management</Link>
             <Link href="#">Flexible HR Consultancy</Link>
             <Link href="#">Recruitment Assistance</Link>
             <Link href="#">Training & Development</Link>

@@ -5,7 +5,7 @@ import { fadeInUp } from "@/utils/animations";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 
-const BookConsultation = () => {
+const BookConsultation = ({ title, text }) => {
   return (
     <section className="book-consultation">
       <div className="_container">
@@ -16,12 +16,8 @@ const BookConsultation = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2>Ready to Improve Your HR?</h2>
-            <p>
-              Schedule a free consultation to discuss your HR <br />
-              needs and discover how our services can help <br />
-              your business succeed.
-            </p>
+            <h2 dangerouslySetInnerHTML={{ __html: title }} />
+            <p dangerouslySetInnerHTML={{ __html: text }} />
             <Link href="#" className="main-button">
               <span>Book consultation</span>
               <ButtonArrow />
