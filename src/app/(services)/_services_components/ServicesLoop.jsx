@@ -7,7 +7,7 @@ import Dots from "@/icons/Dots";
 import OrderButton from "@/global_components/OrderButton";
 import OrderPopup from "@/global_components/OrderPopup";
 
-const ServicesLoop = ({ services }) => {
+const ServicesLoop = ({ services, category }) => {
   return (
     <>
       <section className="services-loop">
