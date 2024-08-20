@@ -6,7 +6,7 @@ import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
 
-const ServicePricing = () => {
+const ServicePricing = ({text}) => {
   return (
     <section className="pricing">
       <div className="_container">
@@ -19,12 +19,7 @@ const ServicePricing = () => {
         >
           <Dots />
           <h2>Need Detailed Pricing?</h2>
-          <p>
-            Interested in learning more about our Retained HR Support service?
-            <br />
-            Download our detailed pricing guide to see how we can provide
-            tailored HR solutions that fit your budget.
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: text }} />
           <Link href={"#"} className="main-button">
             <span>Download price list</span>
             <ButtonArrow />

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="_container">
           <div>
             <Link href="/">
-              <img src="/images/logo-white.svg" alt="logo" />
+              <img src="/images/logo-white.svg" width={235} alt="logo" />
             </Link>
             <p>
               Rapid HR Connect: tailored HR <br />
@@ -28,10 +28,10 @@ const Footer = () => {
             <span></span>
             <Link href="/retained-hr-support">Retained HR Support</Link>
             <Link href="/hr-project-management">HR Project Management</Link>
-            <Link href="#">Flexible HR Consultancy</Link>
-            <Link href="#">Recruitment Assistance</Link>
-            <Link href="#">Training & Development</Link>
-            <Link href="#">HR Documentation</Link>
+            <Link href="/flexible-hr-consultancy">Flexible HR Consultancy</Link>
+            <Link href="/recruitment-assistance">Recruitment Assistance</Link>
+            <Link href="/training-development">Training & Development</Link>
+            <Link href="/hr-documentation">HR Documentation</Link>
           </div>
           <div>
             <span></span>

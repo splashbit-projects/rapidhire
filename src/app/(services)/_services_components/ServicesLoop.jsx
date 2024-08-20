@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
+import OrderButton from "@/global_components/OrderButton";
+import OrderPopup from "@/global_components/OrderPopup";
 
 const ServicesLoop = ({ services }) => {
   return (
-    <section className="services-loop">
+    <>
+      <section className="services-loop">
       <div className="_container">
         <motion.div
           className="section-title"
@@ -31,15 +34,14 @@ const ServicesLoop = ({ services }) => {
             >
               <h3>{service.title}</h3>
               <p>{service.text}</p>
-              <button className="main-button">
-                <span>Order</span>
-                <ButtonArrow />
-              </button>
+              <OrderButton serviceName={service.title} />
             </motion.div>
           ))}
         </div>
       </div>
     </section>
+    <OrderPopup />
+    </>
   );
 };
 

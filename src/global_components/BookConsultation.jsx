@@ -14,7 +14,7 @@ const BookConsultation = ({ title, text }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInUp} 
           >
             <h2 dangerouslySetInnerHTML={{ __html: title }} />
             <p dangerouslySetInnerHTML={{ __html: text }} />

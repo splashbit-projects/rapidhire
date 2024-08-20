@@ -3,6 +3,7 @@ import "@/styles/base.scss";
 import Footer from "@/global_components/Footer";
 import Header from "@/global_components/Header";
 import Preloader from "@/global_components/Preloader";
+import { PopupsProvider } from "@/context/PopupsContext";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        <Preloader />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <PopupsProvider>
+          <Preloader />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </PopupsProvider>
       </body>
     </html>
   );

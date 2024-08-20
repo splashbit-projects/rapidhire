@@ -107,7 +107,11 @@ const HRProjectManagement = () => {
       />
       <KeyBenefits benefits={keyBenefits} />
       <ServicesLoop services={services} />
-      <ServicePricing />
+      <ServicePricing
+        text={
+          "Want to know more about our HR Project Management service? <br/>Download our detailed pricing guide to explore how we can support your HR projects from start to finish."
+        }
+      />
       <BookConsultation
         title={"Ready to Take the Next Step?"}
         text={

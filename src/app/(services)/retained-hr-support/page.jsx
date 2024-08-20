@@ -101,13 +101,13 @@ const RetainedHRSupport = () => {
           "Comprehensive, continuous HR support tailored to your business needs, ensuring you have expert guidance every step of the way."
         }
         info={
-          "In today;s fast-paced business environment, consistent and reliable HR support is essential to maintaining a productive and compliant workforce. Our Retained HR Support service provides your business with ongoing access to expert HR advice and solutions, helping you confidently navigate complex HR challenges. By partnering with Rapid HR Connect, you can focus on growing your business while we care for your HR needs."
+          "If you're ready to enhance your HR capabilities with our <br/>Retained HR Support service, we're here to help. Contact us <br/>today to discuss how we can tailor our services to your needs."
         }
         image={"/images/services/retainedHero.png"}
       />
       <KeyBenefits benefits={keyBenefits} />
       <ServicesLoop services={services} />
-      <ServicePricing />
+      <ServicePricing text={"Interested in learning more about our Retained HR Support service? <br/>Download our detailed pricing guide to see how we can provide tailored HR solutions that fit your budget."}/>
       <BookConsultation
         title={"Ready to Take the Next Step?"}
         text={
