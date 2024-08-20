@@ -20,7 +20,7 @@ const HomeApproach = () => {
           <Dots />
           <h2>Our Approach to HR Risks Management</h2>
           <p>
-            At Rapidhire, our proven approach to HR risk management has achieved
+            At Rapid HR Connect, our proven approach to HR risk management has achieved
             a success rate of <span>99.98%</span>.<br />
             We have refined our strategy through extensive experience to
             effectively address and manage HR challenges.
