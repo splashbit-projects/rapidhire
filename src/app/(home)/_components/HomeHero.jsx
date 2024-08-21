@@ -6,6 +6,7 @@ import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import HomeHeroIcon from "@/icons/HomeHeroIcon";
 import Image from "next/image";
+import RequestButton from "@/global_components/RequestButton";
 
 const HomeHero = () => {
   return (
@@ -29,10 +30,7 @@ const HomeHero = () => {
               variants={fadeInUp}
               className="button-wrap"
             >
-              <Link className="main-button" href="#">
-                <span>Book consultation</span>
-                <ButtonArrow />
-              </Link>
+              <RequestButton />
             </motion.div>
           </div>
           <div className="right">
@@ -63,7 +61,12 @@ const HomeHero = () => {
             </motion.div>
           </div>
         </div>
-        <Image src="/images/home/homeHero.png" quality={100} width={1110} height={400} />
+        <Image
+          src="/images/home/homeHero.png"
+          quality={100}
+          width={1110}
+          height={400}
+        />
       </div>
     </section>
   );

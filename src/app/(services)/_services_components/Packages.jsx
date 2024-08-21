@@ -28,8 +28,8 @@ const Packages = ({ title, packages }) => {
             >
               <div>
                 <h3>
-                    <img src="/images/services/disc.svg"/>
-                    <span>{pack.title}</span>
+                  <img src="/images/services/disc.svg" />
+                  <span>{pack.title}</span>
                 </h3>
                 <p>{pack.description}</p>
               </div>
@@ -38,7 +38,11 @@ const Packages = ({ title, packages }) => {
                 <div dangerouslySetInnerHTML={{ __html: pack.included }} />
               </div>
 
-              <OrderButton text={"Order now"} serviceName={pack.title} />
+              <OrderButton
+                text={"Order now"}
+                serviceName={pack.title}
+                type={"package"}
+              />
             </motion.div>
           ))}
         </div>

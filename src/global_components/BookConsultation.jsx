@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
+import RequestButton from "./RequestButton";
 
 const BookConsultation = ({ title, text }) => {
   return (
@@ -14,14 +15,11 @@ const BookConsultation = ({ title, text }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp} 
+            variants={fadeInUp}
           >
             <h2 dangerouslySetInnerHTML={{ __html: title }} />
             <p dangerouslySetInnerHTML={{ __html: text }} />
-            <Link href="#" className="main-button">
-              <span>Book consultation</span>
-              <ButtonArrow />
-            </Link>
+            <RequestButton />
           </motion.div>
         </div>
       </div>

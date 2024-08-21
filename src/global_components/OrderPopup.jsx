@@ -1,43 +1,35 @@
 "use client";
 import React from "react";
-import {
-  Formik,
-  Form,
-  Field,
-  ErrorMessage,
-} from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { usePopup } from "@/context/PopupsContext";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
+import ButtonArrow from "@/icons/ButtonArrow";
 
 function OrderPopup() {
-  const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
+  const {
+    orderPopupDisplay,
+    setOrderPopupDisplay,
+    serviceValue,
+    popupTitle,
+    popupSubtitle,
+  } = usePopup();
   const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
-    firstName: Yup.string().required("The field is required."),
-    lastName: Yup.string().required("The field is required."),
+    name: Yup.string().required("This field is required!"),
     email: Yup.string()
-      .email("Please enter a valid email address.")
-      .required("The field is required."),
-    phone: Yup.string().required("The field is required."),
-    company: Yup.string().required("The field is required."),
-    website: Yup.string().required("The field is required."),
-    message: Yup.string().required("The field is required."),
-    budget: Yup.string().required("The field is required."),
+      .email("Invalid email address")
+      .required("This field is required!"),
+    phone: Yup.string().required("This field is required!"),
   });
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
-    company: "",
-    website: "",
-    message: "",
-    budget: "",
+    additional: "",
     service: `${serviceValue} Request`,
   };
 
@@ -57,9 +49,11 @@ function OrderPopup() {
       service: `${serviceValue} Request`,
     };
 
-    console.log("Form values being submitted: ", valuesWithService);
+    setSubmitting(false);
+    resetForm();
+    setStatus({ success: true });
 
-    try {
+    /*try {
       const response = await fetch("/api/emails/order", {
         method: "POST",
         headers: {
@@ -81,7 +75,7 @@ function OrderPopup() {
       console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
-    }
+    }*/
   };
 
   return (
@@ -113,57 +107,36 @@ function OrderPopup() {
               />
               <div>
                 <div className="request-form">
-                  {status && status.success ? (
-                    <div className="success-message">
-                      <h2>Thank you!</h2>
-                      <span>
-                        Your request has been successfully received. Our team
-                        will review your information and contact you shortly to
-                        discuss your marketing challenges and the solutions we
-                        can provide.
-                      </span>
-                    </div>
-                  ) : (
-                    <>
-                      <h2 className="service-title">{serviceValue} Request</h2>
-
-                      <Form>
-                        <Field
-                          type="hidden"
-                          name="service"
-                          value={`${serviceValue} Request`}
-                        />
-                        <div>
-                          <Field
-                            name="firstName"
-                            type="text"
-                            placeholder="First name"
-                            className={
-                              touched.firstName && errors.firstName
-                                ? "invalid"
-                                : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="firstName"
-                            component="div"
-                            className="error"
+                  <Form>
+                    {status && status.success ? (
+                      <div className="thanks-message full">
+                        <img src="/images/success.svg" />
+                        <span>
+                          Thank you for choosing Rapid HR Connect!
+                          <br />
+                          Our representative will reach out to you shortly.
+                        </span>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="full">
+                          <h3>{popupTitle}</h3>
+                          <h2 className="service-title">{serviceValue}</h2>
+                          <p
+                            dangerouslySetInnerHTML={{ __html: popupSubtitle }}
                           />
                         </div>
-
                         <div>
                           <Field
-                            name="lastName"
+                            name="name"
                             type="text"
-                            placeholder="Last name"
+                            placeholder="Full Name*"
                             className={
-                              touched.lastName && errors.lastName
-                                ? "invalid"
-                                : ""
+                              touched.name && errors.name ? "invalid" : ""
                             }
                           />
                           <ErrorMessage
-                            name="lastName"
+                            name="name"
                             component="div"
                             className="error"
                           />
@@ -173,7 +146,7 @@ function OrderPopup() {
                           <Field
                             name="email"
                             type="email"
-                            placeholder="Email"
+                            placeholder="Email Address*"
                             className={
                               touched.email && errors.email ? "invalid" : ""
                             }
@@ -185,12 +158,12 @@ function OrderPopup() {
                           />
                         </div>
 
-                        <div>
+                        <div className="full">
                           <PhoneInput
                             country={countryCode}
                             value=""
                             onChange={(value) => setFieldValue("phone", value)}
-                            placeholder="Your phone"
+                            placeholder="Phone Number*"
                             className={
                               touched.phone && errors.phone ? "invalid" : ""
                             }
@@ -198,65 +171,19 @@ function OrderPopup() {
                           <ErrorMessage name="phone" component="span" />
                         </div>
 
-                        <div>
+                        <div className="full">
                           <Field
-                            name="company"
-                            type="text"
-                            placeholder="Company name"
+                            name="additional"
+                            as="textarea"
+                            placeholder="Your Message"
                             className={
-                              touched.company && errors.company ? "invalid" : ""
+                              touched.additional && errors.additional
+                                ? "invalid"
+                                : ""
                             }
                           />
                           <ErrorMessage
-                            name="company"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="website"
-                            type="text"
-                            placeholder="Company website"
-                            className={
-                              touched.website && errors.website ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="website"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="budget"
-                            type="text"
-                            placeholder="Budget"
-                            className={
-                              touched.budget && errors.budget ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="budget"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="message"
-                            type="text"
-                            placeholder="Message"
-                            className={
-                              touched.message && errors.message ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="message"
+                            name="additional"
                             component="div"
                             className="error"
                           />
@@ -264,14 +191,15 @@ function OrderPopup() {
 
                         <button
                           type="submit"
-                          className="orange-button"
+                          className="main-button"
                           disabled={isSubmitting}
                         >
-                          Submit
+                          <span>Send</span>
+                          <ButtonArrow />
                         </button>
-                      </Form>
-                    </>
-                  )}
+                      </>
+                    )}
+                  </Form>
                 </div>
               </div>
             </div>

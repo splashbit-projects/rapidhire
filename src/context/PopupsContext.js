@@ -8,6 +8,8 @@ export const PopupsProvider = ({ children }) => {
   const [orderPopupDisplay, setOrderPopupDisplay] = useState(false);
   const [thanksPopupDisplay, setThanksPopupDisplay] = useState(false);
   const [serviceValue, setServiceValue] = useState(false);
+  const [popupTitle, setPopupTitle] = useState(false);
+  const [popupSubtitle, setPopupSubtitle] = useState(false);
 
   return (
     <PopupsContext.Provider
@@ -19,7 +21,11 @@ export const PopupsProvider = ({ children }) => {
         thanksPopupDisplay,
         setThanksPopupDisplay,
         serviceValue,
-        setServiceValue
+        setServiceValue,
+        popupTitle,
+        setPopupTitle,
+        popupSubtitle,
+        setPopupSubtitle
       }}
     >
       {children}

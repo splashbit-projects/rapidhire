@@ -11,36 +11,36 @@ const ServicesLoop = ({ services, category }) => {
   return (
     <>
       <section className="services-loop">
-      <div className="_container">
-        <motion.div
-          className="section-title"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          <Dots />
-          <h2>Services We Offer</h2>
-        </motion.div>
-        <div className="services-loop__body">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="service"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-              <OrderButton serviceName={service.title} />
-            </motion.div>
-          ))}
+        <div className="_container">
+          <motion.div
+            className="section-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <Dots />
+            <h2>Services We Offer</h2>
+          </motion.div>
+          <div className="services-loop__body">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="service"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+              >
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <OrderButton serviceName={service.title} type={"service"} />
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-    <OrderPopup />
+      </section>
+      <OrderPopup />
     </>
   );
 };
