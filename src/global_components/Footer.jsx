@@ -37,7 +37,7 @@ const Footer = () => {
             <span></span>
             <Link href="/our-approach">Our approach</Link>
             <Link href="/guides-and-insights">Guides and insights</Link>
-            <Link href="#">Why choose us</Link>
+            <Link href="/why-choose-us">Why choose us</Link>
             <Link href="#">Get in touch</Link>
             <Link href="#">FAQ HR</Link>
           </div>
