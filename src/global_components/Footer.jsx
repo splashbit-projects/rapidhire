@@ -18,9 +18,14 @@ const Footer = () => {
               solutions for your business
             </p>
             <div className="address">
-              <div>Registered address:</div>
+              <div>
+                Registered address: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr,
+                193 Lockhart Rd, Wan Chai, Hong Kong
+              </div>
               <div>Office address:</div>
-              <div>Email:</div>
+              <div>
+                Email: <Link href="mailto:">info@rapidhrconnect.com</Link>
+              </div>
               <div>Phone:</div>
             </div>
           </div>
@@ -52,7 +57,19 @@ const Footer = () => {
       </div>
       <div className="foot-bottom">
         <div className="_container">
-          © {currentYear} Rapidhire LTD. All Rights Reserved.
+          <span>© {currentYear} Rapidhire LTD. All Rights Reserved.</span>
+
+          <div className="soc">
+            <Link href="#">
+              <img src="/images/Facebook_foot.svg" />
+            </Link>
+            <Link href="#">
+              <img src="/images/Instagram_foot.svg" />
+            </Link>
+            <Link href="#">
+              <img src="/images/X_foot.svg" />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

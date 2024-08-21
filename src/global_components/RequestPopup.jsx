@@ -145,17 +145,13 @@ function RequestPopup() {
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
-
-    /*try {
-      const response = await fetch("/api/emails/order", {
+    try {
+      const response = await fetch("/api/emails/request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(valuesWithService),
+        body: JSON.stringify(values),
       });
 
       if (response.ok) {
@@ -171,7 +167,7 @@ function RequestPopup() {
       console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
-    }*/
+    }
   };
 
   return (
@@ -210,8 +206,7 @@ function RequestPopup() {
                       <div className="thanks-message full">
                         <img src="/images/success.svg" />
                         <span>
-                          Thank you for choosing Rapid HR Connect!{" "}
-                          <br />
+                          Thank you for choosing Rapid HR Connect! <br />
                           Our representative will reach out to you shortly.
                         </span>
                       </div>

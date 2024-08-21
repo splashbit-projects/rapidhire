@@ -46,14 +46,10 @@ function OrderPopup() {
   ) => {
     const valuesWithService = {
       ...values,
-      service: `${serviceValue} Request`,
+      service: serviceValue,
     };
 
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
-
-    /*try {
+    try {
       const response = await fetch("/api/emails/order", {
         method: "POST",
         headers: {
@@ -75,7 +71,7 @@ function OrderPopup() {
       console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
-    }*/
+    }
   };
 
   return (

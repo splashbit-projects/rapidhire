@@ -130,13 +130,9 @@ const RequestForm = () => {
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
-
-    /*try {
+    try {
       console.log("Submitting form with values:", values); // Added logging
-      const response = await fetch("/api/emails/contact", {
+      const response = await fetch("/api/emails/request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -146,12 +142,8 @@ const RequestForm = () => {
 
       const result = await response.json(); // Await response.json() to log it
 
-      console.log("Response from server:", result); // Log server response
-
       if (response.ok) {
         setTimeout(() => {
-          console.log("Form submitted successfully:", values); // Added logging
-          setThanksPopupDisplay(true);
           setSubmitting(false);
           resetForm();
           setStatus({ success: true });
@@ -164,7 +156,7 @@ const RequestForm = () => {
       console.error("Error submitting form:", error); // Added logging
       setStatus({ success: false });
       setSubmitting(false);
-    }*/
+    }
   };
 
   return (
