@@ -12,6 +12,18 @@ import {
 import { packages } from "@/lib/services/packages";
 import Packages from "../_services_components/Packages";
 
+export const metadata = {
+  title: "Recruitment Assistance Services | Attract Top Talent",
+  description:
+    "Streamline your recruitment process with Rapid HR Connect. Our recruitment assistance services help you find and hire the best candidates for your business.",
+  openGraph: {
+    title: "Recruitment Assistance Services | Attract Top Talent",
+    description:
+      "Streamline your recruitment process with Rapid HR Connect. Our recruitment assistance services help you find and hire the best candidates for your business.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const RecruitmentAssistance = () => {
   return (
     <>

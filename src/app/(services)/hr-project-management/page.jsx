@@ -9,6 +9,18 @@ import { keyBenefits, services } from "@/lib/services/HRProjectManagement_Data";
 import Packages from "../_services_components/Packages";
 import { packages } from "@/lib/services/packages";
 
+export const metadata = {
+  title: "HR Project Management Services | Expert HR Solutions",
+  description:
+    "Manage HR projects effectively with Rapid HR Connect. Our HR project management services ensure successful implementation and alignment with your business goals.",
+  openGraph: {
+    title: "HR Project Management Services | Expert HR Solutions",
+    description:
+      "Manage HR projects effectively with Rapid HR Connect. Our HR project management services ensure successful implementation and alignment with your business goals.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const HRProjectManagement = () => {
   return (
     <>

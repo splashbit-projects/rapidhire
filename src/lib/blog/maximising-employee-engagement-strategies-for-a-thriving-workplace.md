@@ -8,8 +8,8 @@ excerpt: "Employee engagement is more than just a metric; it's the lifeblood
   approach that aligns with your company's values and goals. This
   article will explore key strategies to maximise employee engagement,
   creating a work environment where your team can thrive."
-seo_title: ""
-seo_description: ""
+seo_title: "Maximising Employee Engagement: Strategies for a Thriving Workplace | Rapid HR Connect"
+seo_description: "Explore practical strategies to boost employee engagement and create a thriving workplace. Learn how to enhance motivation, productivity, and retention with actionable insights."
 thumbnail: "/images/guides/article1.webp"
 ---
 

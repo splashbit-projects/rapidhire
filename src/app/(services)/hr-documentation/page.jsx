@@ -9,6 +9,18 @@ import { keyBenefits, services } from "@/lib/services/HRDocumentation_Data";
 import Packages from "../_services_components/Packages";
 import { packages } from "@/lib/services/packages";
 
+export const metadata = {
+  title: "HR Documentation Services | Ensure Compliance and Clarity",
+  description:
+    "Keep your HR practises compliant and organised with our comprehensive HR documentation services. Rapid HR Connect provides expert support for all your documentation needs.",
+  openGraph: {
+    title: "HR Documentation Services | Ensure Compliance and Clarity",
+    description:
+      "Keep your HR practises compliant and organised with our comprehensive HR documentation services. Rapid HR Connect provides expert support for all your documentation needs.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const HRDocumentation = () => {
   return (
     <>

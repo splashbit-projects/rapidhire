@@ -9,6 +9,18 @@ import { keyBenefits, services } from "@/lib/services/TrainingDevelopment_Data";
 import Packages from "../_services_components/Packages";
 import { packages } from "@/lib/services/packages";
 
+export const metadata = {
+  title: "Training & Development Services | Empower Your Workforce",
+  description:
+    "Enhance employee skills and boost productivity with our tailored training and development programs. Rapid HR Connect helps your team reach its full potential.",
+  openGraph: {
+    title: "Training & Development Services | Empower Your Workforce",
+    description:
+      "Enhance employee skills and boost productivity with our tailored training and development programs. Rapid HR Connect helps your team reach its full potential.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const TrainingDevelopment = () => {
   return (
     <>

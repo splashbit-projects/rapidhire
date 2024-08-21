@@ -7,6 +7,18 @@ import HowWeWork from "./_components/HowWeWork";
 import KeyMethodologies from "./_components/KeyMethodologies";
 import ClientCollaboration from "./_components/ClientCollaboration";
 
+export const metadata = {
+  title: "Strategic HR Management | Tailored Solutions for Business Success",
+  description:
+    "Learn about Rapid HR Connect's strategic approach to HR management. We offer customised HR solutions that drive growth, mitigate risks, and ensure long-term success.",
+  openGraph: {
+    title: "Strategic HR Management | Tailored Solutions for Business Success",
+    description:
+      "Learn about Rapid HR Connect's strategic approach to HR management. We offer customised HR solutions that drive growth, mitigate risks, and ensure long-term success.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const OurApproach = () => {
   return (
     <>

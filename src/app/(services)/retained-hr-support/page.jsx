@@ -9,6 +9,18 @@ import { keyBenefits, services } from "@/lib/services/RetaindeHRSupport_Data";
 import { packages } from "@/lib/services/packages";
 import Packages from "../_services_components/Packages";
 
+export const metadata = {
+  title: "Retained HR Support Services | Ongoing HR Expertise",
+  description:
+    "Benefit from ongoing HR support tailored to your business needs. Rapid HR Connect provides comprehensive retained HR services to enhance your workforce and improve retention.",
+  openGraph: {
+    title: "Retained HR Support Services | Ongoing HR Expertise",
+    description:
+      "Benefit from ongoing HR support tailored to your business needs. Rapid HR Connect provides comprehensive retained HR services to enhance your workforce and improve retention.",
+    //images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
 const RetainedHRSupport = () => {
   return (
     <>
