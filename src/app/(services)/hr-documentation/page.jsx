@@ -17,7 +17,7 @@ export const metadata = {
     title: "HR Documentation Services | Ensure Compliance and Clarity",
     description:
       "Keep your HR practises compliant and organised with our comprehensive HR documentation services. Rapid HR Connect provides expert support for all your documentation needs.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

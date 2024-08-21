@@ -17,7 +17,7 @@ export const metadata = {
     title: "Training & Development Services | Empower Your Workforce",
     description:
       "Enhance employee skills and boost productivity with our tailored training and development programs. Rapid HR Connect helps your team reach its full potential.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

@@ -20,7 +20,7 @@ export const metadata = {
     title: "Recruitment Assistance Services | Attract Top Talent",
     description:
       "Streamline your recruitment process with Rapid HR Connect. Our recruitment assistance services help you find and hire the best candidates for your business.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

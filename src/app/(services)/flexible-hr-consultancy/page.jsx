@@ -20,7 +20,7 @@ export const metadata = {
     title: "Flexible HR Consultancy Services | Tailored HR Expertise",
     description:
       "Access expert HR consultancy services tailored to your unique challenges. Rapid HR Connect offers flexible HR solutions to support your business at every stage.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

@@ -21,7 +21,7 @@ export const metadata = {
     },
     description:
       "Discover tailored HR services that empower your business to thrive. Rapid HR Connect offers expert support from recruitment to compliance to meet your unique needs.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

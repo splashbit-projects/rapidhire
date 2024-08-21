@@ -15,7 +15,7 @@ export const metadata = {
     title: "Strategic HR Management | Tailored Solutions for Business Success",
     description:
       "Learn about Rapid HR Connect's strategic approach to HR management. We offer customised HR solutions that drive growth, mitigate risks, and ensure long-term success.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata = {
     title: "Retained HR Support Services | Ongoing HR Expertise",
     description:
       "Benefit from ongoing HR support tailored to your business needs. Rapid HR Connect provides comprehensive retained HR services to enhance your workforce and improve retention.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

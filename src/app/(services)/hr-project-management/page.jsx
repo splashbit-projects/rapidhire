@@ -17,7 +17,7 @@ export const metadata = {
     title: "HR Project Management Services | Expert HR Solutions",
     description:
       "Manage HR projects effectively with Rapid HR Connect. Our HR project management services ensure successful implementation and alignment with your business goals.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

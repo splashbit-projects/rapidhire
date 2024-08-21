@@ -11,7 +11,7 @@ export const metadata = {
     title: "HR FAQs | Common Questions Answered by Rapid HR Connect",
     description:
       "Find answers to your most common HR questions with Rapid HR Connect's FAQ page. Learn more about our services and how we can support your business.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 

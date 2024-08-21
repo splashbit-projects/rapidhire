@@ -17,7 +17,7 @@ export const metadata = {
     title: "Why Choose Rapid HR Connect | Expert HR Solutions",
     description:
       "Discover the unique benefits of partnering with Rapid HR Connect. Learn why businesses trust us for comprehensive, tailored HR solutions.",
-    //images: "https://rapidhrconnect.com/images/meta.png",
+    images: "https://rapidhrconnect.com/images/meta.png",
   },
 };
 
