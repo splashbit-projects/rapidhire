@@ -38,8 +38,8 @@ const Footer = () => {
             <Link href="/our-approach">Our approach</Link>
             <Link href="/guides-and-insights">Guides and insights</Link>
             <Link href="/why-choose-us">Why choose us</Link>
-            <Link href="#">Get in touch</Link>
-            <Link href="#">FAQ HR</Link>
+            <Link href="/get-in-touch">Get in touch</Link>
+            <Link href="/faq">FAQ</Link>
           </div>
           <div>
             <span></span>

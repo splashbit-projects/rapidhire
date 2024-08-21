@@ -1,0 +1,143 @@
+@import "mixin";
+
+.faq-hero {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(70);
+  }
+  ._container {
+    > img {
+      height: auto;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(50) rem(30);
+    background: #ffffff;
+    border-radius: rem(10);
+    margin-bottom: rem(15);
+    gap: rem(50);
+    @media (max-width: rem(992)) {
+      padding: rem(30) rem(20);
+      flex-direction: column;
+      gap: rem(20);
+    }
+
+    h1 {
+      color: #0d0d0d;
+      font-size: rem(40);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: left;
+      margin: 0;
+      span {
+        color: #08ac34;
+      }
+      @media (max-width: rem(992)) {
+        font-size: rem(32);
+      }
+    }
+
+    .left {
+      width: calc(40% - rem(25));
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+    }
+
+    .right {
+      width: calc(60% - rem(25));
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      p {
+        color: #0d0d0d;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.faq-wrap {
+  margin: rem(100) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(70) 0;
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__body {
+    margin: rem(50) 0 rem(100) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+    @media (max-width: rem(992)) {
+      margin: rem(30) 0 rem(70) 0;
+    }
+    .accordion {
+      padding: rem(20) rem(40);
+      background: #ffffff;
+      border-radius: from rem(10);
+      @media (max-width: rem(992)) {
+        padding: rem(20);
+      }
+      &.opened {
+        .title {
+          svg {
+            transform: rotate(-180deg);
+            circle {
+              fill: #0d0d0d;
+            }
+          }
+        }
+        .content {
+          > div {
+            height: auto;
+            padding-top: rem(20);
+          }
+        }
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        h2 {
+          margin: 0;
+          width: calc(100% - rem(50));
+          color: #0d0d0d;
+          font-size: rem(24);
+          font-weight: 600;
+          line-height: 1.2;
+          text-align: left;
+          @media (max-width: rem(992)) {
+          }
+        }
+        svg {
+          width: rem(30);
+          height: rem(30);
+          transform: rotate(0);
+          transition: all 0.5s;
+        }
+      }
+      .content {
+        overflow-y: hidden;
+        > div {
+          color: #0d0d0d;
+          font-size: rem(16);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}

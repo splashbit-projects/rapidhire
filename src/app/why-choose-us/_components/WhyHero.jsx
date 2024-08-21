@@ -27,7 +27,7 @@ const WhyHero = () => {
               variants={fadeInUp}
               className="button-wrap"
             >
-              <Link className="main-button" href="#">
+              <Link className="main-button" href="/get-in-touch">
                 <span>Contact us today</span>
                 <ButtonArrow />
               </Link>
@@ -46,11 +46,7 @@ const WhyHero = () => {
             </motion.p>
           </div>
         </div>
-        <Image
-          src="/images/why/whyHero.png"
-          width={1110}
-          height={400}
-        />
+        <Image src="/images/why/whyHero.png" width={1110} height={400} />
       </div>
     </section>
   );

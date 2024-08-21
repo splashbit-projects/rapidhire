@@ -2,13 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
-import Link from "next/link";
-import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
+import Link from "next/link";
+import RequestForm from "@/global_components/RequestForm";
 
-const HomeAssistance = () => {
+const ContactUs = () => {
   return (
-    <section className="home-assistance">
+    <section className="contact-us">
       <div className="_container">
         <motion.div
           className="section-title"
@@ -18,15 +18,18 @@ const HomeAssistance = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Need instant HR assistance?</h2>
-          <Link href={"/get-in-touch"} className="main-button">
-            <span>Contact us</span>
-            <ButtonArrow />
-          </Link>
+          <h2>Contact Us</h2>
+          <p>
+            Have a question or need assistance? Fill out the form below, and our
+            team will respond promptly.
+          </p>
         </motion.div>
+        <div className="form-wrap">
+          <RequestForm />
+        </div>
       </div>
     </section>
   );
 };
 
-export default HomeAssistance;
+export default ContactUs;

@@ -46,7 +46,7 @@ const HomeFAQ = () => {
           variants={fadeInUp}
           className="button-wrap"
         >
-          <Link href="#" className="main-button">
+          <Link href="/faq" className="main-button">
             <span>More FAQs</span>
             <ButtonArrow />
           </Link>
