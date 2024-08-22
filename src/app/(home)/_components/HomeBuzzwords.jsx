@@ -92,7 +92,7 @@ const HomeBuzzwords = () => {
             </div>
           </div>
           <div className="right">
-            <Link href="#" className="main-button">
+            <Link href="/why-choose-us" className="main-button">
               <span>Why us?</span>
               <ButtonArrow />
             </Link>
