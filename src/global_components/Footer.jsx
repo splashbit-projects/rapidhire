@@ -27,9 +27,9 @@ const Footer = () => {
                 Bay, Hong Kong
               </div>
               <div>
-                Email: <Link href="mailto:">info@rapidhrconnect.com</Link>
+                Email: <Link href="mailto:info@rapidhrconnect.com">info@rapidhrconnect.com</Link>
               </div>
-              <div>Phone:</div>
+              <div>Phone: <Link href="tel:+00000000000">+00000000000</Link></div>
             </div>
           </div>
           <div>
@@ -51,10 +51,10 @@ const Footer = () => {
           </div>
           <div>
             <span></span>
-            <Link href="#">Terms and Conditions</Link>
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Cookie Policy</Link>
-            <Link href="#">Refund Policy</Link>
+            <Link href="/terms-and-conditions">Terms and Conditions</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/cookie-policy">Cookie Policy</Link>
+            <Link href="/refund-policy">Refund Policy</Link>
           </div>
         </div>
       </div>

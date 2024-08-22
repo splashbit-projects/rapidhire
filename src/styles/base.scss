@@ -11,7 +11,7 @@ body {
   }
   &.no-scroll {
     overflow: hidden;
-    padding-right: 12px;
+    padding-right: 10px;
     @media (max-width: rem(992)) {
       padding-right: 0;
     }

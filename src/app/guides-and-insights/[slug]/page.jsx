@@ -28,7 +28,7 @@ export async function generateMetadata({ params: { slug, locale } }) {
     openGraph: {
       title: post.seo_title,
       description: post.seo_description,
-      //images: "https://nextwavead.com/images/meta.png",
+      //images: "https://rapidhrconnect.com/images/meta.png",
     },
   };
 }
