@@ -22,7 +22,10 @@ const Footer = () => {
                 Registered address: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr,
                 193 Lockhart Rd, Wan Chai, Hong Kong
               </div>
-              <div>Office address:</div>
+              <div>
+                Office address: Office number 245, 8/FL, 28 Yee Wo St Causeway
+                Bay, Hong Kong
+              </div>
               <div>
                 Email: <Link href="mailto:">info@rapidhrconnect.com</Link>
               </div>
