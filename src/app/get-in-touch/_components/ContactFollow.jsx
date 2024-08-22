@@ -24,13 +24,16 @@ const ContactFollow = () => {
           </p>
         </motion.div>
         <div className="soc">
-          <Link href="#">
+          <Link href="https://www.facebook.com/rapidhrconnect" target="_blank">
             <img src="/images/Facebook.svg" />
           </Link>
-          <Link href="#">
+          <Link
+            href="https://www.instagram.com/rapidhrconnectcom"
+            target="_blank"
+          >
             <img src="/images/Instagram.svg" />
           </Link>
-          <Link href="#">
+          <Link href="https://x.com/rapidhrconnect" target="_blank">
             <img src="/images/X.svg" />
           </Link>
         </div>
