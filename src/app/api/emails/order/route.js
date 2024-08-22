@@ -34,38 +34,44 @@ export async function POST(request) {
       subject: "Service Order Confirmation",
       html: `
         <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
-  <thead>
-    <tr>
-      <td>
-        <img style="width: 100%" src="https://nextwavead.com/images/email_header.png" />
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 40px">
-        <h2 style="text-align: left; font-size: 20px;color:#202020;">Dear ${name},</h2>
-        <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for submitting your service order with Next Wave Ad!</p>
-        <p style="text-align: left; font-size: 16px;color:#202020;">We have received your request and our team will review the details. You can expect a follow-up from us shortly to discuss your needs and outline the next steps.</p>
-        <p style="text-align: left; font-size: 16px;color:#202020;">In the meantime, if you have any questions or need further assistance, please feel free to reply to this email or contact us at info@nextwavead.com.</p>
-        <p style="text-align: left; font-size: 16px;color:#202020;">We look forward to working with you and delivering exceptional results!</p>
-        <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best regards,<br>Rapid HR Connect Team </h2>
-      </td>
-    </tr>
-  </tbody>
-  <tfoot >
-				<td style="padding: 24px 40px;background: #222222;background-size:cover;font-size: 20px;text-decoration: none;color: #ffffff;text-align: center;">
-					Thanks for using <a href="https://nextwavead.com/" style="color: #fff;font-size: 20px;text-decoration: none;color: #EB6418;">Next Wave Ad</a>
-				</td>
-			  </tfoot>
-</table>
+          <thead>
+            <tr>
+              <td>
+                <img style="width: 100%" src="https://rapidhrconnect.com/images/email_header.png" />
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 40px">
+                <h2 style="text-align: left; font-size: 20px;color:#202020;">Dear ${name},</h2>
+                <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for your recent order with Rapid HR Connect! We are pleased to confirm that your order has been received and is being processed. Below are the details of your order:</p>
+
+                <ul style="padding-left: 16px;">
+                  <li style="text-align: left; font-size: 16px;color:#202020;"><b>Services Ordered:</b> ${service}</li>
+                </ul>
+
+                <p style="text-align: left; font-size: 16px;color:#202020;">To proceed with your order, we will email you our payment instructions. Once the payment has been completed, we will begin working on your services and update you on the progress.<br>
+                  If you have any questions or need further assistance, please don't hesitate to contact us.
+                </p>
+                <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for choosing Rapid HR Connect for your HR needs.</p>
+                <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best regards,<br>The Rapid HR Connect Team</h2>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot >
+                <td style="padding: 24px 40px;background: #068E2A;background-size:cover;font-size: 20px;text-decoration: none;color: #ffffff;text-align: center;">
+                  Thanks for using <a href="https://rapidhrconnect.com" style="color: #fff;font-size: 20px;text-decoration: none;">rapidhrconnect.com</a>
+                </td>
+                </tfoot>
+        </table>
       `,
     };
 
     // Send email to the recipient
     await transporter.sendMail(mailOptionsRecipient);
     // Send email to the client
-    //await transporter.sendMail(mailOptionsClient);
+    await transporter.sendMail(mailOptionsClient);
 
     return NextResponse.json({ message: "Success: emails were sent" });
   } catch (error) {
