@@ -72,7 +72,6 @@
     margin: rem(70) 0;
   }
 
-
   &__body {
     margin-top: rem(50);
     display: flex;
@@ -182,7 +181,7 @@
       @media (max-width: rem(992)) {
         width: 100%;
         img {
-          height: rem(210);
+          height: auto;
         }
       }
       > div {
@@ -454,8 +453,6 @@
   }
 }
 
-
-
 .home-faq {
   margin: rem(100) 0;
   @media (max-width: rem(992)) {
@@ -477,7 +474,7 @@
     .accordion {
       padding: rem(20) rem(40);
       background: #ffffff;
-      border-radius: from rem(10);
+      border-radius: rem(10);
       @media (max-width: rem(992)) {
         padding: rem(20);
       }
@@ -511,7 +508,7 @@
           line-height: 1.2;
           text-align: left;
           @media (max-width: rem(992)) {
-            
+            font-size: rem(16);
           }
         }
         svg {

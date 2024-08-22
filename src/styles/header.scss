@@ -17,7 +17,7 @@ header {
     @media (max-width: rem(992)) {
       padding: rem(10) rem(20);
     }
-    
+
     a {
       display: flex;
     }
@@ -73,6 +73,9 @@ header {
         font-weight: 600;
         line-height: 1;
         text-align: left;
+        &.active {
+          color: #08ac34;
+        }
         &:hover {
           color: #08ac34;
         }

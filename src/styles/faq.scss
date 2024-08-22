@@ -84,7 +84,7 @@
     .accordion {
       padding: rem(20) rem(40);
       background: #ffffff;
-      border-radius: from rem(10);
+      border-radius: rem(10);
       @media (max-width: rem(992)) {
         padding: rem(20);
       }
@@ -118,6 +118,7 @@
           line-height: 1.2;
           text-align: left;
           @media (max-width: rem(992)) {
+            font-size: rem(16);
           }
         }
         svg {

@@ -14,6 +14,7 @@ const Header = () => {
   };
 
   useEffect(() => {
+    console.log("pathname: " + pathname);
     setMenuOpened(false);
     document.body.classList.remove("no-scroll");
   }, [pathname]);
@@ -47,22 +48,78 @@ const Header = () => {
         <div className="_container">
           <nav>
             <div className="left-col">
-              <Link href="/">Home</Link>
-              <Link href="/our-approach">Our approach</Link>
-              <Link href="/retained-hr-support">Retained HR Support</Link>
-              <Link href="/hr-project-management">HR Project Management</Link>
-              <Link href="/flexible-hr-consultancy">
+              <Link href="/" className={pathname == "/" ? "active" : ""}>
+                Home
+              </Link>
+              <Link
+                href="/our-approach"
+                className={pathname == "/our-approach" ? "active" : ""}
+              >
+                Our approach
+              </Link>
+              <Link
+                href="/retained-hr-support"
+                className={pathname == "/retained-hr-support" ? "active" : ""}
+              >
+                Retained HR Support
+              </Link>
+              <Link
+                href="/hr-project-management"
+                className={pathname == "/hr-project-management" ? "active" : ""}
+              >
+                HR Project Management
+              </Link>
+              <Link
+                href="/flexible-hr-consultancy"
+                className={
+                  pathname == "/flexible-hr-consultancy" ? "active" : ""
+                }
+              >
                 Flexible HR Consultancy
               </Link>
-              <Link href="/recruitment-assistance">Recruitment Assistance</Link>
+              <Link
+                href="/recruitment-assistance"
+                className={
+                  pathname == "/recruitment-assistance" ? "active" : ""
+                }
+              >
+                Recruitment Assistance
+              </Link>
             </div>
             <div className="right-col">
-              <Link href="/training-development">Training & Development</Link>
-              <Link href="/hr-documentation">HR Documentation</Link>
-              <Link href="/guides-and-insights">Guides and insights</Link>
-              <Link href="/why-choose-us">Why choose us</Link>
-              <Link href="/get-in-touch">Get in touch</Link>
-              <Link href="/faq">FAQ</Link>
+              <Link
+                href="/training-development"
+                className={pathname == "/training-development" ? "active" : ""}
+              >
+                Training & Development
+              </Link>
+              <Link
+                href="/hr-documentation"
+                className={pathname == "/hr-documentation" ? "active" : ""}
+              >
+                HR Documentation
+              </Link>
+              <Link
+                href="/guides-and-insights"
+                className={pathname == "/guides-and-insights" ? "active" : ""}
+              >
+                Guides and insights
+              </Link>
+              <Link
+                href="/why-choose-us"
+                className={pathname == "/why-choose-us" ? "active" : ""}
+              >
+                Why choose us
+              </Link>
+              <Link
+                href="/get-in-touch"
+                className={pathname == "/get-in-touch" ? "active" : ""}
+              >
+                Get in touch
+              </Link>
+              <Link href="/faq" className={pathname == "/faq" ? "active" : ""}>
+                FAQ
+              </Link>
             </div>
           </nav>
         </div>
