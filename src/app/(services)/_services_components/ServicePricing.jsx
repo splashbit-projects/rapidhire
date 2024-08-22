@@ -6,7 +6,7 @@ import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
 
-const ServicePricing = ({text}) => {
+const ServicePricing = ({ text }) => {
   return (
     <section className="pricing">
       <div className="_container">
@@ -20,7 +20,11 @@ const ServicePricing = ({text}) => {
           <Dots />
           <h2>Need Detailed Pricing?</h2>
           <p dangerouslySetInnerHTML={{ __html: text }} />
-          <Link href={"#"} className="main-button">
+          <Link
+            href={"/pricelist/Rapid_HR_Connect_price_list.pdf"}
+            className="main-button"
+            target="_blank"
+          >
             <span>Download price list</span>
             <ButtonArrow />
           </Link>
