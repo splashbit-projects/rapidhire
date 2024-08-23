@@ -59,9 +59,9 @@ const ContactInfo = () => {
           </div>
         </div>
         <div className="contact-info__bottom">
-          <Link href="tel:+00000000000">
+          <Link href="tel:+85230011568">
             <img src="/images/contact/phone.svg" />
-            <span></span>
+            <span>+85230011568</span>
           </Link>
           <Link href="mailto:info@rapidhrconnect.com">
             <img src="/images/contact/mail.svg" />

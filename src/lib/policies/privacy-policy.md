@@ -111,5 +111,5 @@ Under GDPR, you can access, update, retrieve, and delete your data. Rapid HR Con
 For any questions or concerns regarding this Privacy Policy, please get in touch with Rapid HR Connect:
 
 - **Email:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Phone:** [Awaiting Update](#)
+- **Phone:** [+85230011568](tel:+85230011568)
 - **Website:** [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)

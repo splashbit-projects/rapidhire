@@ -39,7 +39,7 @@ Once we receive your refund request, our team will thoroughly review the provide
 If you have any questions or need further clarification regarding our Refund Policy, please feel free to reach out to our customer support team:
 
 - **Email:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Phone:** [Awaiting Update](#)
+- **Phone:** [+85230011568](tel:+85230011568)
 - **Contact Form:** Available on our website at [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
 
 ## Policy Updates and Revisions

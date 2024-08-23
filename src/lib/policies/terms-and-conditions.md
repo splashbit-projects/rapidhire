@@ -117,5 +117,5 @@ Rapid HR Connect is not responsible for any website content, code, or inaccuraci
 For any questions or concerns regarding these Terms & Conditions, please get in touch with Rapid HR Connect:
 
 - **Email:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Phone:** [Awaiting Update](#)
+- **Phone:** [+85230011568](tel:+85230011568)
 - **Website:** [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
