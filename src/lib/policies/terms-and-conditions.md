@@ -32,6 +32,10 @@ You agree to use the Rapid HR Connect website and services following these Terms
 - Sell, rent, lease, assign, distribute, transmit, host, outsource, disclose, or otherwise commercially exploit the website or its services to any third party.
 - Modify, create derivative works from, disassemble, decompile, or reverse engineer any part of the Rapid HR Connect website.
 
+## Age Verification
+
+Using the Rapid HR Connect Service, you confirm that you meet the minimum age required to enter into legally binding agreements and use recruitment and HR services in your country or region of residence. Depending on the jurisdiction, this age may vary, but you must be at least 18 years old. Rapidhire LTD reserves the right to request proof of age to ensure compliance with this requirement. Failure to provide accurate age information or falsifying age-related data will immediately terminate service provision. We will cease providing services if we determine that you do not meet the minimum age requirement based on applicable local laws.
+
 ## Ownership of Feedback and Suggestions
 
 Any ideas, feedback, comments, or suggestions (collectively referred to as “Suggestions”) that you provide to Rapid HR Connect regarding the website or its services shall become the exclusive property of Rapid HR Connect. Rapid HR Connect reserves the right to use, copy, modify, publish, or redistribute the Suggestions for any purpose and in any manner without providing any compensation or acknowledgment to you.
