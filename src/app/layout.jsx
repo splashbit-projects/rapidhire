@@ -5,6 +5,7 @@ import Header from "@/global_components/Header";
 import Preloader from "@/global_components/Preloader";
 import { PopupsProvider } from "@/context/PopupsContext";
 import RequestPopup from "@/global_components/RequestPopup";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
+        <GoogleAnalytics gaId="G-DJ1JVWX3LP" />
         <PopupsProvider>
           <Preloader />
           <Header />
