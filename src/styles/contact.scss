@@ -75,6 +75,7 @@
     flex-wrap: wrap;
     > div {
       width: calc(50% - rem(15));
+      flex-grow: 1;
       border-radius: rem(10);
       background: #ffffff;
       display: flex;

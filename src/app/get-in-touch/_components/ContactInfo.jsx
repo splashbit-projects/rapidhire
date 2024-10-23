@@ -39,7 +39,7 @@ const ContactInfo = () => {
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div>
+          {/*<div>
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>Office Address</h3>
@@ -56,7 +56,7 @@ const ContactInfo = () => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </div> */}
         </div>
         <div className="contact-info__bottom">
           <Link href="tel:+85230011568">
