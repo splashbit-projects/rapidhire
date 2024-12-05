@@ -75,7 +75,7 @@ const Footer = () => {
             >
               <img src="/images/Instagram_foot.svg" />
             </Link>
-            <Link href="https://x.com/rapidhrconnect" target="_blank">
+            <Link href="https://x.com/RapidHr_Connect" target="_blank">
               <img src="/images/X_foot.svg" />
             </Link>
           </div>
