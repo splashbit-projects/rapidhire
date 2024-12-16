@@ -64,7 +64,7 @@ const Footer = () => {
 
           <div className="soc">
             <Link
-              href="https://www.facebook.com/rapidhrconnect"
+              href="https://www.facebook.com/rapid.hr.connectt/"
               target="_blank"
             >
               <img src="/images/Facebook_foot.svg" />

@@ -24,7 +24,7 @@ const ContactFollow = () => {
           </p>
         </motion.div>
         <div className="soc">
-          <Link href="https://www.facebook.com/rapidhrconnect" target="_blank">
+          <Link href="https://www.facebook.com/rapid.hr.connectt/" target="_blank">
             <img src="/images/Facebook.svg" />
           </Link>
           <Link
