@@ -6,18 +6,33 @@ const LangSwitcher = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleLanguageChange = (language, languageCode) => {
-    const select = document.querySelector(".goog-te-combo");
-    if (select) {
-      select.value = language; // Set the desired language
-      select.dispatchEvent(new Event("change")); // Trigger the change event to translate
-      setCurrentLang(languageCode); // Update current language
-      setIsDropdownOpen(false); // Close dropdown
-    }
+    const retryDispatchEvent = (attempts = 10) => {
+      const select = document.querySelector(".goog-te-combo");
+      if (select) {
+        select.value = language;
+        const changeEvent = new Event("change", {
+          bubbles: true,
+          cancelable: true,
+        });
+        select.dispatchEvent(changeEvent);
+
+        if (document.documentElement.lang === language || attempts <= 1) {
+          setCurrentLang(languageCode); 
+          setIsDropdownOpen(false); 
+          return;
+        }
+      }
+
+      if (attempts > 1) {
+        setTimeout(() => retryDispatchEvent(attempts - 1), 100);
+      }
+    };
+
+    retryDispatchEvent();
   };
 
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
-      {/* Current Language Button */}
       <button
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         style={{
@@ -32,7 +47,6 @@ const LangSwitcher = () => {
         <img src={`/images/${currentLang}.svg`} />
       </button>
 
-      {/* Language Dropdown */}
       {isDropdownOpen && (
         <ul
           translate="no"
@@ -46,7 +60,7 @@ const LangSwitcher = () => {
             margin: 0,
             border: "1px solid #ccc",
             borderRadius: "5px",
-            width:"130px"
+            width: "130px",
           }}
         >
           <li
