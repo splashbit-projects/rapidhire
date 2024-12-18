@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "@/styles/header.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import LangSwitcher from "./LangSwitcher";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -33,6 +34,7 @@ const Header = () => {
             </Link>
 
             <div className="header-right">
+              <LangSwitcher />
               <span onClick={() => menuOpen()} className="menu-btn">
                 {!menuOpened ? (
                   <img src="/images/menu-buger.svg" alt="menu-buger" />

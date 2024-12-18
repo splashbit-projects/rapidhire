@@ -30,6 +30,9 @@ body {
     background-color: #08ac34;
     border-radius: 100px;
   }
+  > .skiptranslate {
+    display: none !important;
+  }
 }
 * {
   outline: none !important;
@@ -47,8 +50,8 @@ a {
   }
 }
 
-.logo{
-  img{
+.logo {
+  img {
     @media (max-width: rem(992)) {
       max-width: rem(175);
     }
@@ -245,7 +248,7 @@ a {
 
     .request-form {
       .thanks-message {
-        img{
+        img {
           width: rem(32);
         }
         span {
@@ -253,7 +256,7 @@ a {
           color: #ffffff;
           @media (max-width: rem(992)) {
             font-size: rem(20);
-            br{
+            br {
               display: none;
             }
           }

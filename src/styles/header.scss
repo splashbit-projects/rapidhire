@@ -25,6 +25,14 @@ header {
       display: flex;
       cursor: pointer;
     }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+      button {
+        display: flex;
+      }
+    }
   }
 }
 
