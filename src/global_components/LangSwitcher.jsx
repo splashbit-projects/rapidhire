@@ -17,8 +17,8 @@ const LangSwitcher = () => {
         select.dispatchEvent(changeEvent);
 
         if (document.documentElement.lang === language || attempts <= 1) {
-          setCurrentLang(languageCode); 
-          setIsDropdownOpen(false); 
+          setCurrentLang(languageCode);
+          setIsDropdownOpen(false);
           return;
         }
       }
@@ -44,7 +44,12 @@ const LangSwitcher = () => {
           cursor: "pointer",
         }}
       >
-        <img src={`/images/${currentLang}.svg`} />
+        <img
+          src={`/images/${currentLang}.svg`}
+          style={{
+            width: "28px",
+          }}
+        />
       </button>
 
       {isDropdownOpen && (
@@ -74,7 +79,12 @@ const LangSwitcher = () => {
               color: "#fff",
             }}
           >
-            <img src="/images/EN.svg" />
+            <img
+              src="/images/EN.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             English
           </li>
           <li
@@ -88,7 +98,12 @@ const LangSwitcher = () => {
               color: "#fff",
             }}
           >
-            <img src="/images/DE.svg" />
+            <img
+              src="/images/DE.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             German
           </li>
           <li
@@ -102,8 +117,32 @@ const LangSwitcher = () => {
               color: "#fff",
             }}
           >
-            <img src="/images/IT.svg" />
+            <img
+              src="/images/IT.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             Italian
+          </li>
+          <li
+            onClick={() => handleLanguageChange("zh-CN", "zh-CN")}
+            style={{
+              padding: "7px 0",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              color: "#fff",
+            }}
+          >
+            <img
+              src="/images/zh-CN.svg"
+              style={{
+                width: "28px",
+              }}
+            />
+            Chinese
           </li>
         </ul>
       )}
