@@ -1,5 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
 
 export async function POST(request) {
   try {
@@ -17,22 +18,38 @@ export async function POST(request) {
       additional,
     } = bodyJSON;
 
-    // Configure nodemailer with Gmail SMTP
+    // OAuth2 Configuration
+    const CLIENT_ID = process.env.GMAIL_CLIENT_ID;
+    const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET;
+    const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN;
+    const REDIRECT_URI = "https://developers.google.com/oauthplayground";
+
+    const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+    oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+    // Get Access Token
+    const accessToken = await oauth2Client.getAccessToken();
+
+    // Configure nodemailer with OAuth2
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
+        type: "OAuth2",
         user: process.env.EMAIL_USER, // Your Gmail email
-        pass: process.env.EMAIL_PASS, // Your Gmail password or app password
+        clientId: CLIENT_ID,
+        clientSecret: CLIENT_SECRET,
+        refreshToken: REFRESH_TOKEN,
+        accessToken: accessToken.token,
       },
       tls: {
-        rejectUnauthorized: false, // This bypasses the certificate validation
+        rejectUnauthorized: false, // This bypasses certificate validation
       },
     });
 
     // Set up email data for the recipient
     const mailOptionsRecipient = {
-      from: '"Rapid HR Connect" <noreply@rapidhrconnect.com >', // Sender address
-      to: "noreply@rapidhrconnect.com ", // Change to your recipient's email
+      from: '"Rapid HR Connect" <noreply@rapidhrconnect.com>', // Sender address
+      to: "noreply@rapidhrconnect.com", // Change to your recipient's email
       subject: "Consultation Request Confirmation",
       text: `Name: ${name}\n
       Email: ${email}\n
@@ -47,7 +64,7 @@ export async function POST(request) {
 
     // Set up email data for the client
     const mailOptionsClient = {
-      from: '"Rapid HR Connect" <noreply@rapidhrconnect.com >', // Sender address
+      from: '"Rapid HR Connect" <noreply@rapidhrconnect.com>', // Sender address
       to: email, // Client's email
       subject: "Consultation Request Confirmation",
       html: `

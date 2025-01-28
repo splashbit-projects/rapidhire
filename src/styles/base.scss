@@ -91,6 +91,21 @@ a {
   text-align: left;
   gap: rem(20);
   border: none;
+
+  &.loading {
+    background: linear-gradient(90deg, #06b53a, #014515, #06b53a);
+    background-size: 300% 100%;
+    animation: gradient-animation 1.5s infinite linear;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .section-title {

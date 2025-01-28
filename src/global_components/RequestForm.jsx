@@ -288,7 +288,7 @@ const RequestForm = () => {
 
               <button
                 type="submit"
-                className="main-button"
+                className={`${isSubmitting ? "loading" : ""} main-button`}
                 disabled={isSubmitting}
               >
                 <span>Send</span>
