@@ -27,9 +27,14 @@ const Footer = () => {
                 Bay, Hong Kong
               </div> */}
               <div>
-                Email: <Link href="mailto:info@rapidhrconnect.com">info@rapidhrconnect.com</Link>
+                Email:{" "}
+                <Link href="mailto:info@rapidhrconnect.com">
+                  info@rapidhrconnect.com
+                </Link>
               </div>
-              <div>Phone: <Link href="tel:+85230011568">+85230011568</Link></div>
+              <div>
+                Phone: <Link href="tel:+85230011568">+85230011568</Link>
+              </div>
             </div>
           </div>
           <div>
@@ -74,9 +79,6 @@ const Footer = () => {
               target="_blank"
             >
               <img src="/images/Instagram_foot.svg" />
-            </Link>
-            <Link href="https://x.com/RapidHr_Connect" target="_blank">
-              <img src="/images/X_foot.svg" />
             </Link>
           </div>
         </div>
