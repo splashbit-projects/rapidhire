@@ -8,6 +8,7 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Select from "react-select";
+import { excludedCountries } from "@/utils/countries";
 
 function RequestPopup() {
   const {
@@ -248,6 +249,7 @@ function RequestPopup() {
                           <PhoneInput
                             country={countryCode}
                             value=""
+                            excludeCountries={excludedCountries}
                             onChange={(value) => setFieldValue("phone", value)}
                             placeholder="Your Contact Number"
                             className={
@@ -371,7 +373,9 @@ function RequestPopup() {
 
                         <button
                           type="submit"
-                          className={`${isSubmitting ? "loading" : ""} main-button`}
+                          className={`${
+                            isSubmitting ? "loading" : ""
+                          } main-button`}
                           disabled={isSubmitting}
                         >
                           <span>Send</span>

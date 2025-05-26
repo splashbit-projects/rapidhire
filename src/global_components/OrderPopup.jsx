@@ -7,6 +7,7 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import ButtonArrow from "@/icons/ButtonArrow";
+import { excludedCountries } from "@/utils/countries";
 
 function OrderPopup() {
   const {
@@ -157,6 +158,7 @@ function OrderPopup() {
                         <div className="full">
                           <PhoneInput
                             country={countryCode}
+                            excludeCountries={excludedCountries}
                             value=""
                             onChange={(value) => setFieldValue("phone", value)}
                             placeholder="Phone Number*"
