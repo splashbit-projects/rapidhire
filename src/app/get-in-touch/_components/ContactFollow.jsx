@@ -25,12 +25,6 @@ const ContactFollow = () => {
         </motion.div>
         <div className="soc">
           <Link
-            href="https://www.facebook.com/rapid.hr.connectt/"
-            target="_blank"
-          >
-            <img src="/images/Facebook.svg" />
-          </Link>
-          <Link
             href="https://www.instagram.com/rapidhrconnectcom"
             target="_blank"
           >
