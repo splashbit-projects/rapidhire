@@ -30,6 +30,12 @@ const ContactFollow = () => {
           >
             <img src="/images/Instagram.svg" />
           </Link>
+          <Link
+            href="https://x.com/rapidhrconnect"
+            target="_blank"
+          >
+            <img src="/images/X.svg" />
+          </Link>
         </div>
       </div>
     </section>
