@@ -36,6 +36,12 @@ const ContactFollow = () => {
           >
             <img src="/images/X.svg" />
           </Link>
+          <Link
+            href="https://www.linkedin.com/company/rapid-hr-connect/"
+            target="_blank"
+          >
+            <img src="/images/linkedin.svg" />
+          </Link>
         </div>
       </div>
     </section>

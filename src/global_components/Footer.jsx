@@ -80,6 +80,12 @@ const Footer = () => {
             >
               <img src="/images/X_foot.svg" />
             </Link>
+            <Link
+            href="https://www.linkedin.com/company/rapid-hr-connect/"
+            target="_blank"
+          >
+            <img src="/images/linkedin_foot.svg" />
+          </Link>
           </div>
         </div>
       </div>
