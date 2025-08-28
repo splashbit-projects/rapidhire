@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { usePopup } from "@/context/PopupsContext";
@@ -8,9 +8,16 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import ButtonArrow from "@/icons/ButtonArrow";
 import { excludedCountries } from "@/utils/countries";
+import ReCaptcha from "react-google-recaptcha";
 
 const RequestForm = () => {
   const countryCode = useCountryCode();
+
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+
+  const onCaptchaChange = (value) => {
+    setIsCaptchaVerified(!!value);
+  };
 
   const serviceTypes = [
     { value: "Retained HR Support", label: "Retained HR Support" },
@@ -287,11 +294,11 @@ const RequestForm = () => {
                 />
                 <ErrorMessage name="time" component="div" className="error" />
               </div>
-
+              <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''} onChange={onCaptchaChange} />
               <button
                 type="submit"
                 className={`${isSubmitting ? "loading" : ""} main-button`}
-                disabled={isSubmitting}
+                disabled={isSubmitting || !isCaptchaVerified}
               >
                 <span>Send</span>
                 <ButtonArrow />
