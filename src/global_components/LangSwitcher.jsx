@@ -2,7 +2,7 @@ import Script from "next/script";
 import { useState } from "react";
 
 const LangSwitcher = () => {
-  const [currentLang, setCurrentLang] = useState("EN");
+  const [currentLang, setCurrentLang] = useState("zh-CN");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleLanguageChange = (language, languageCode) => {
@@ -155,6 +155,11 @@ const LangSwitcher = () => {
               { pageLanguage: "en" },
               "google_translate_element"
             );
+            const select = document.querySelector(".goog-te-combo");
+            if (select) {
+              select.value = "zh-CN";
+              select.dispatchEvent(new Event("change", { bubbles: true }));
+            }
           };
           window.googleTranslateElementInit = googleTranslateElementInit;
         }}
