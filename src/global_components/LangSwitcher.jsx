@@ -155,11 +155,14 @@ const LangSwitcher = () => {
               { pageLanguage: "en" },
               "google_translate_element"
             );
-            const select = document.querySelector(".goog-te-combo");
-            if (select) {
-              select.value = "zh-CN";
-              select.dispatchEvent(new Event("change", { bubbles: true }));
-            }
+
+            setTimeout(() => {
+              const select = document.querySelector(".goog-te-combo");
+              if (select) {
+                select.value = "zh-CN";
+                select.dispatchEvent(new Event("change", { bubbles: true }));
+              }
+            }, 500)
           };
           window.googleTranslateElementInit = googleTranslateElementInit;
         }}
