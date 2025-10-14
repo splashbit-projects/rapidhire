@@ -6,6 +6,7 @@ import Preloader from "@/global_components/Preloader";
 import { PopupsProvider } from "@/context/PopupsContext";
 import RequestPopup from "@/global_components/RequestPopup";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { CookiePopup } from "@/global_components/CookiePopup";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <Footer />
           <RequestPopup />
+          <CookiePopup />
         </PopupsProvider>
       </body>
     </html>
