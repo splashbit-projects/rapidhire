@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const FaqHero = () => {
+  const t = useTranslations("faq.hero");
+
   return (
     <section className="faq-hero">
       <div className="_container">
@@ -16,7 +19,7 @@ const FaqHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Frequently Asked <span>Questions</span>
+              {t("title.0", {fallback: "Frequently Asked"})}<span>{t("title.1", {fallback: "Questions"})}</span>
             </motion.h1>
           </div>
           <div className="right">
@@ -26,14 +29,7 @@ const FaqHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              At Rapid HR Connect, we understand that navigating the
-              complexities of HR can raise many questions. That's why we've
-              compiled a list of frequently asked questions to help you better
-              understand how our services can support your business. Whether
-              you're dealing with employee engagement, recruitment challenges,
-              compliance concerns, or the need for specialised HR strategies,
-              our FAQ page provides clear, concise answers to the most common HR
-              issues.
+              {t("text", {fallback: "At Rapid HR Connect, we understand that navigating the complexities of HR can raise many questions. That's why we've compiled a list of frequently asked questions to help you better understand how our services can support your business. Whether you're dealing with employee engagement, recruitment challenges, compliance concerns, or the need for specialised HR strategies, our FAQ page provides clear, concise answers to the most common HR issues."})}
             </motion.p>
           </div>
         </div>

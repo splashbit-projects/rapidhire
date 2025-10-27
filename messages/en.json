@@ -5,7 +5,7 @@
         "0": "Building Workplaces",
         "1": "Your Team Loves"
       },
-      "consultancy": "Consultancy",
+      "consultancy": "Consultancy", 
       "management": "Management",
       "optimisation": "Optimisation",
       "development": "Development"
@@ -23,7 +23,7 @@
           "text": "Access dedicated HR expertise that functions like your own department, tailored to your business needs at a fraction of the cost."
         },
         "1": {
-          "title": "HR Project Management",
+          "title": "HR Project Management", 
           "text": "Benefit from our comprehensive project management to efficiently handle significant HR initiatives and ensure successful outcomes."
         },
         "2": {
@@ -131,7 +131,7 @@
       "title": "Powered by Industry-Leading HR Tools",
       "items": {
         "0": "PayScale",
-        "1": "Glint",
+        "1": "Glint", 
         "2": "Greenhouse",
         "3": "Lattice",
         "4": "ComplyRight",
@@ -169,8 +169,93 @@
       "text": "Schedule a free consultation to discuss your HR <br />needs and discover how our services can help <br />your business succeed."
     }
   },
+  "faq": {
+    "hero": {
+      "title": {
+        "0": "Frequently Asked",
+        "1": "Questions"
+      },
+      "text": "At Rapid HR Connect, we understand that navigating the complexities of HR can raise many questions. That's why we've compiled a list of frequently asked questions to help you better understand how our services can support your business. Whether you're dealing with employee engagement, recruitment challenges, compliance concerns, or the need for specialised HR strategies, our FAQ page provides clear, concise answers to the most common HR issues."
+    },
+    "wrap": {
+      "text": {
+        "0": "If you don't find the answer to your specific question, feel free to contact us directly.",
+        "1": "We're here to help you with personalised solutions tailored to your business needs."
+      },
+      "button": "Get in touch",
+      "questions": {
+        "0": {
+          "title": "How can I improve employee engagement in my company?",
+          "text": "Employee engagement is crucial for productivity and retention. At Rapidhire LTD, our Training & Development services offer tailored workshops and coaching to boost employee motivation and engagement. We help create a positive work environment where your team thrives."
+        },
+        "1": {
+          "title": "We're experiencing high employee turnover. What can we do to address this?",
+          "text": "High turnover can be costly and disruptive. Our Retained HR Support provides you with ongoing HR expertise to develop effective retention strategies, improve workplace culture, and address issues that contribute to employee dissatisfaction."
+        },
+        "2": {
+          "title": "Our recruitment process isn't yielding the results we need. What should we do?",
+          "text": "If you're struggling with recruitment, our Recruitment Assistance service can help. Partnering with our sister company, The Recruitment Consultants, we help find and attract top talent that fits your business needs."
+        },
+        "3": {
+          "title": "We need to update our HR policies, but we don't know where to start. Can you help?",
+          "text": "Updating HR policies can be complex. Our HR Documentation service offers comprehensive support for creating and refining policies, handbooks, and employment contracts, ensuring they meet legal requirements and align with your company's needs."
+        },
+        "4": {
+          "title": "How can I ensure my HR practices comply with the latest laws and regulations?",
+          "text": "Staying compliant with ever-changing labour laws and regulations can be challenging. Our HR Documentation and Compliance services provide up-to-date policies and procedures that meet legal standards, reducing the risk of non-compliance and associated penalties."
+        },
+        "5": {
+          "title": "How can I improve my company's recruitment and onboarding processes?",
+          "text": "Effective recruitment and onboarding are critical to successfully integrating new hires. Our Recruitment Assistance service offers end-to-end support, from crafting job descriptions to conducting interviews and onboarding new employees. We ensure your processes are efficient, welcoming, and aligned with your business goals."
+        },
+        "6": {
+          "title": "How can I develop leadership skills within my team?",
+          "text": "Leadership development is critical to driving your business forward. Our Training and Development service includes specialized programs focused on building leadership skills, ensuring your team can handle challenges and lead confidently."
+        },
+        "7": {
+          "title": "Can you help us manage organisational change?",
+          "text": "Yes, we can! Managing change effectively is crucial to minimizing disruption and maintaining employee morale. Our HR Project Management service includes change management consulting, providing strategies and support to help your organisation navigate transitions smoothly."
+        },
+        "8": {
+          "title": "How can I implement a performance management system in my company?",
+          "text": "Implementing a performance management system is vital for tracking and enhancing employee performance. Our HR Consultancy services can help you design and implement a system tailored to your business needs, including setting clear KPIs, regular reviews, and feedback mechanisms."
+        },
+        "9": {
+          "title": "What are the benefits of outsourcing HR services?",
+          "text": "Outsourcing HR services to Rapid HR Connect allows you to focus on your core business while we handle the complexities of HR management. Benefits include access to expert knowledge, cost savings, compliance assurance, and improved HR efficiency. Whether you need full-service HR support or help with specific projects, we provide the expertise you need to succeed."
+        },
+        "10": {
+          "title": "How can I improve employee retention during times of company growth?",
+          "text": "Growth can create challenges in maintaining a cohesive culture. Our Retained HR Support service helps you develop and implement retention strategies tailored to your growing workforce. We focus on enhancing workplace culture, employee engagement, and career development opportunities to keep your team motivated and loyal."
+        },
+        "11": {
+          "title": "How can I improve employee retention during times of company growth?",
+          "text": "Growth can create challenges in maintaining a cohesive culture. Our Retained HR Support service helps you develop and implement retention strategies tailored to your growing workforce. We focus on enhancing workplace culture, employee engagement, and career development opportunities to keep your team motivated and loyal."
+        },
+        "12": {
+          "title": "How can I improve employee retention during times of company growth?",
+          "text": "Growth can create challenges in maintaining a cohesive culture. Our Retained HR Support service helps you develop and implement retention strategies tailored to your growing workforce. We focus on enhancing workplace culture, employee engagement, and career development opportunities to keep your team motivated and loyal."
+        },
+        "13": {
+          "title": "What HR services can I outsource to improve efficiency in my business?",
+          "text": "You can outsource various HR functions, including recruitment, performance management, policy development, employee relations, compliance, and more. At Rapid HR Connect, we offer flexible HR Consultancy services that allow you to outsource the most resource-intensive HR functions for your business, improving efficiency and enabling you to focus on strategic growth."
+        },
+        "14": {
+          "title": "Can you help us create a Diversity and Inclusion (D&I) strategy?",
+          "text": "Absolutely! We specialize in creating tailored Diversity and Inclusion strategies that promote a positive workplace environment. Our HR Consultancy services include the development of D&I policies, training programs, and initiatives that help foster an inclusive, respectful, and innovative workplace."
+        },
+        "15": {
+          "title": "How do I handle underperformance in my team effectively?",
+          "text": "Addressing underperformance can be challenging, but it can lead to significant improvements with the right strategies. Our Performance Management services provide the tools and techniques needed to address underperformance constructively, including setting clear expectations, offering feedback, and creating development plans to help employees get back on track."
+        },
+        "16": {
+          "title": "Can you assist with temporary staffing or short-term HR projects?",
+          "text": "Yes, we offer flexible HR solutions for both long-term and short-term needs. Whether you need temporary staffing, assistance with a specific HR project, or interim HR support, our team can provide expert guidance and services that fit your timeline and objectives."
+        }
+      }
+    }
+  },
   "requestButton": {
     "label": "Book consultation"
   }
 }
- 
