@@ -5,8 +5,11 @@ import { fadeInUp } from "@/utils/animations";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
+import { useTranslations } from "next-intl";
 
 const HomeAssistance = () => {
+  const t = useTranslations("home.assistance");
+
   return (
     <section className="home-assistance">
       <div className="_container">
@@ -18,9 +21,9 @@ const HomeAssistance = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Need instant HR assistance?</h2>
+          <h2>{t("title", {fallback: "Need instant HR assistance?"})}</h2>
           <Link href={"/get-in-touch"} className="main-button">
-            <span>Contact us</span>
+            <span>{t("button", {fallback: "Contact us"})}</span>
             <ButtonArrow />
           </Link>
         </motion.div>

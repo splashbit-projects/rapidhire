@@ -7,8 +7,11 @@ import ButtonArrow from "@/icons/ButtonArrow";
 import HomeHeroIcon from "@/icons/HomeHeroIcon";
 import Image from "next/image";
 import RequestButton from "@/global_components/RequestButton";
+import { useTranslations } from "next-intl";
 
 const HomeHero = () => {
+  const t = useTranslations("home.hero");
+
   return (
     <section className="home-hero">
       <div className="_container">
@@ -20,8 +23,8 @@ const HomeHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Building Workplaces <br />
-              <span>Your Team Loves</span>
+              {t("title.0", {fallback: "Building Workplaces"})} <br />
+              <span>{t("title.1", {fallback: "Your Team Loves"})}</span>
             </motion.h1>
             <motion.div
               initial="hidden"
@@ -41,15 +44,15 @@ const HomeHero = () => {
               variants={fadeInUp}
             >
               <span>
-                Consultancy <span>/</span>
+                {t("consultancy", {fallback: "Consultancy"})} <span>/</span>
               </span>{" "}
               <span>
-                Management <span>/</span>
+                {t("management", {fallback: "Management"})} <span>/</span>
               </span>{" "}
               <span>
-                Optimisation <span>/</span>
+                {t("optimisation", {fallback: "Optimisation"})} <span>/</span>
               </span>{" "}
-              Development
+              {t("development", {fallback: "Development"})}
             </motion.h2>
             <motion.div
               initial="hidden"

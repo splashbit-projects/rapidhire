@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
-import Accordion from "@/app/(home)/_components/Accordion";
+import Accordion from "@/app/[locale]/(home)/_components/Accordion";
 import Dots from "@/icons/Dots";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";

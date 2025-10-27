@@ -7,6 +7,7 @@ import { PopupsProvider } from "@/context/PopupsContext";
 import RequestPopup from "@/global_components/RequestPopup";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CookiePopup } from "@/global_components/CookiePopup";
+import { NextIntlClientProvider } from "next-intl";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -34,14 +35,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={urbanist.className}>
         <GoogleAnalytics gaId="G-DJ1JVWX3LP" />
-        <PopupsProvider>
-          <Preloader />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <RequestPopup />
-          <CookiePopup />
-        </PopupsProvider>
+        <NextIntlClientProvider>
+          <PopupsProvider>
+            <Preloader />
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <RequestPopup />
+            <CookiePopup />
+          </PopupsProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

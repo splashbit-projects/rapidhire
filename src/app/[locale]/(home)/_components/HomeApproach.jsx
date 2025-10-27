@@ -5,8 +5,11 @@ import { fadeInUp } from "@/utils/animations";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
+import { useTranslations } from "next-intl";
 
 const HomeApproach = () => {
+  const t = useTranslations("home.approach");
+
   return (
     <section className="home-approach">
       <div className="_container">
@@ -18,12 +21,10 @@ const HomeApproach = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Our Approach to HR Risks Management</h2>
+          <h2>{t("title", {fallback: "Our Approach to HR Risks Management"})}</h2>
           <p>
-            At Rapid HR Connect, our proven approach to HR risk management has achieved
-            a success rate of <span>99.98%</span>.<br />
-            We have refined our strategy through extensive experience to
-            effectively address and manage HR challenges.
+            {t("text.0", {fallback: "At Rapid HR Connect, our proven approach to HR risk management has achieved a success rate of"})} <span>99.98%</span>.<br />
+            {t("text.1", {fallback: "We have refined our strategy through extensive experience to effectively address and manage HR challenges."})}
           </p>
         </motion.div>
         <div className="home-approach__body">
@@ -37,61 +38,56 @@ const HomeApproach = () => {
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>
-                Comprehensive
+                {t("cards.0.title.0", {fallback: "Comprehensive"})}
                 <br />
-                Assessment
+                {t("cards.0.title.1", {fallback: "Assessment"})}
               </h3>
               <p>
-                We start by thoroughly evaluating your current HR practices and
-                identifying potential risks.
+                {t("cards.0.text", {fallback: "We start by thoroughly evaluating your current HR practices and identifying potential risks."})}
               </p>
             </div>
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>
-                Customised
+                {t("cards.1.title.0", {fallback: "Customised"})}
                 <br />
-                Solutions
+                {t("cards.1.title.1", {fallback: "Solutions"})}
               </h3>
               <p>
-                We tailor our strategies to your specific needs and develop and
-                implement solutions to address identified issues.
+                {t("cards.1.text", {fallback: "We tailor our strategies to your specific needs and develop and implement solutions to address identified issues."})}
               </p>
             </div>
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>
-                Compliance
+                {t("cards.2.title.0", {fallback: "Compliance"})}
                 <br />
-                Assurance
+                {t("cards.2.title.1", {fallback: "Assurance"})}
               </h3>
               <p>
-                We ensure that all HR practices meet legal requirements and
-                industry standards to prevent costly violations.
+                {t("cards.2.text", {fallback: "We ensure that all HR practices meet legal requirements and industry standards to prevent costly violations."})}
               </p>
             </div>
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>
-                Ongoing
+                {t("cards.3.title.0", {fallback: "Ongoing"})}
                 <br />
-                Support
+                {t("cards.3.title.1", {fallback: "Support"})}
               </h3>
               <p>
-                Our team provides continuous assistance and updates to keep your
-                HR processes effective and current.
+                {t("cards.3.text", {fallback: "Our team provides continuous assistance and updates to keep your HR processes effective and current."})}
               </p>
             </div>
             <div>
               <img src="/images/home/arrow.svg" />
               <h3>
-                Performance
+                {t("cards.4.title.0", {fallback: "Performance"})}
                 <br />
-                Monitoring
+                {t("cards.4.title.1", {fallback: "Monitoring"})}
               </h3>
               <p>
-                We regularly review and refine strategies to improve workforce
-                effectiveness and mitigate emerging risks.
+                {t("cards.4.text", {fallback: "We regularly review and refine strategies to improve workforce effectiveness and mitigate emerging risks."})}
               </p>
             </div>
           </motion.div>
@@ -104,7 +100,7 @@ const HomeApproach = () => {
           className="button-wrap"
         >
           <Link href="/our-approach" className="main-button">
-            <span>Explore our approach</span>
+            <span>{t("explore", {fallback: "Explore our approach"})}</span>
             <ButtonArrow />
           </Link>
         </motion.div>

@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/utils/animations";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const HomeRisks = () => {
+  const t = useTranslations("home.risks");
+
   return (
     <section className="home-risks">
       <div className="_container">
@@ -17,7 +20,7 @@ const HomeRisks = () => {
               variants={fadeInLeft}
             >
               <h2>
-                The Risks of Going Without <span>Expert HR Support</span>
+                {t("title.0", {fallback: "The Risks of Going Without"})} <span>{t("title.1", {fallback: "Expert HR Support"})}</span>
               </h2>
             </motion.div>
             <motion.div
@@ -38,8 +41,7 @@ const HomeRisks = () => {
             >
               <span>33%</span>
               <p>
-                The average cost to replace an employee is up to 33% of their
-                annual salary.
+                {t("cards.0", {fallback: "The average cost to replace an employee is up to 33% of their annual salary."})}
               </p>
             </motion.div>
             <motion.div
@@ -50,8 +52,7 @@ const HomeRisks = () => {
             >
               <span>60%</span>
               <p>
-                Businesses facing employment lawsuits do not have adequate HR
-                policies in place.
+                {t("cards.1", {fallback: "Businesses facing employment lawsuits do not have adequate HR policies in place."})}
               </p>
             </motion.div>
             <motion.div
@@ -62,8 +63,7 @@ const HomeRisks = () => {
             >
               <span>40%</span>
               <p>
-                Small businesses face compliance issues due to a lack of HR
-                expertise, resulting in costly fines
+                {t("cards.2", {fallback: "Small businesses face compliance issues due to a lack of HR expertise, resulting in costly fines"})}
               </p>
             </motion.div>
             <motion.div
@@ -74,8 +74,7 @@ const HomeRisks = () => {
             >
               <span>20%</span>
               <p>
-                Businesses without HR support face lower employee satisfaction
-                and performance.
+                {t("cards.3", {fallback: "Businesses without HR support face lower employee satisfaction and performance."})}
               </p>
             </motion.div>
           </div>

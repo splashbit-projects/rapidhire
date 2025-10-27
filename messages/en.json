@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "title": {
+        "0": "Building Workplaces",
+        "1": "Your Team Loves"
+      },
+      "consultancy": "Consultancy",
+      "management": "Management",
+      "optimisation": "Optimisation",
+      "development": "Development"
+    },
+    "solutions": {
+      "title": {
+        "0": "People problems can slow your business.",
+        "1": "Whatever HR issue you face",
+        "2": "Rapid HR Connect has the solution."
+      },
+      "learnMore": "Learn more",
+      "items": {
+        "0": {
+          "title": "Retained HR Support",
+          "text": "Access dedicated HR expertise that functions like your own department, tailored to your business needs at a fraction of the cost."
+        },
+        "1": {
+          "title": "HR Project Management",
+          "text": "Benefit from our comprehensive project management to efficiently handle significant HR initiatives and ensure successful outcomes."
+        },
+        "2": {
+          "title": "Flexible HR Consultancy",
+          "text": "Gain on-demand HR insights and solutions for immediate and specific challenges without long-term commitments."
+        },
+        "3": {
+          "title": "Recruitment Assistance",
+          "text": "Leverage our partnership with expert recruiters to identify and secure the best talent to drive your business forward."
+        },
+        "4": {
+          "title": "Training & Development",
+          "text": "Enhance your team's skills and motivation with targeted workshops and one-on-one coaching designed for growth."
+        },
+        "5": {
+          "title": "HR Documentation",
+          "text": "Protect your organisation with clear, precise policies and documentation that support compliance and operational consistency."
+        }
+      }
+    },
+    "assistance": {
+      "title": "Need instant HR assistance?",
+      "button": "Contact us"
+    },
+    "risks": {
+      "title": {
+        "0": "The Risks of Going Without",
+        "1": "Expert HR Support"
+      },
+      "cards": {
+        "0": "The average cost to replace an employee is up to 33% of their annual salary.",
+        "1": "Businesses facing employment lawsuits do not have adequate HR policies in place.",
+        "2": "Small businesses face compliance issues due to a lack of HR expertise, resulting in costly fines",
+        "3": "Businesses without HR support face lower employee satisfaction and performance."
+      }
+    },
+    "approach": {
+      "title": "Our Approach to HR Risks Management",
+      "text": {
+        "0": "At Rapid HR Connect, our proven approach to HR risk management has achieved a success rate of",
+        "1": "We have refined our strategy through extensive experience to effectively address and manage HR challenges."
+      },
+      "explore": "Explore our approach",
+      "cards": {
+        "0": {
+          "title": {
+            "0": "Comprehensive",
+            "1": "Assessment"
+          },
+          "text": "We start by thoroughly evaluating your current HR practices and identifying potential risks."
+        },
+        "1": {
+          "title": {
+            "0": "Customised",
+            "1": "Solutions"
+          },
+          "text": "We tailor our strategies to your specific needs and develop and implement solutions to address identified issues."
+        },
+        "2": {
+          "title": {
+            "0": "Compliance",
+            "1": "Assurance"
+          },
+          "text": "We ensure that all HR practices meet legal requirements and industry standards to prevent costly violations."
+        },
+        "3": {
+          "title": {
+            "0": "Ongoing",
+            "1": "Support"
+          },
+          "text": "Our team provides continuous assistance and updates to keep your HR processes effective and current."
+        },
+        "4": {
+          "title": {
+            "0": "Performance",
+            "1": "Monitoring"
+          },
+          "text": "We regularly review and refine strategies to improve workforce effectiveness and mitigate emerging risks."
+        }
+      }
+    },
+    "buzzwords": {
+      "title": "No More HR Buzzwords",
+      "text": "You're busy running your business — don't waste time with vague promises and jargon. At Rapidhire LTD, we provide actionable HR support that's both straightforward and effective.",
+      "text2": "From everyday advice to comprehensive HR project management, we focus on delivering real results. We help you recruit, develop, and manage a high-performing team that drives your business forward — no fluff, just results.",
+      "commitment": "Our Commitment",
+      "commitmentText": "We guarantee you'll receive practical HR support tailored to your needs. Here's what you can count on:",
+      "commitmentItems": {
+        "0": {
+          "title": "Real Solutions",
+          "text": "Practical HR guidance that makes a difference."
+        },
+        "1": {
+          "title": "On-Time",
+          "text": "Reliable service when you need it."
+        },
+        "2": {
+          "title": "Satisfaction Guaranteed",
+          "text": "If we fall short, we offer a refund."
+        }
+      },
+      "whyUs": "Why us?"
+    },
+    "tools": {
+      "title": "Powered by Industry-Leading HR Tools",
+      "items": {
+        "0": "PayScale",
+        "1": "Glint",
+        "2": "Greenhouse",
+        "3": "Lattice",
+        "4": "ComplyRight",
+        "5": "SAP SuccessFactors",
+        "6": "Cornerstone OnDemand",
+        "7": "Workday Analytics",
+        "8": "BambooHR",
+        "9": "ADP Workforce Now"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "0": {
+          "title": "How can I improve employee engagement in my company?",
+          "text": "Employee engagement is crucial for productivity and retention. At Rapidhire LTD, our Training & Development services offer tailored workshops and coaching to boost employee motivation and engagement. We help create a positive work environment where your team thrives."
+        },
+        "1": {
+          "title": "We're experiencing high employee turnover. What can we do to address this?",
+          "text": "High turnover can be costly and disruptive. Our Retained HR Support provides you with ongoing HR expertise to develop effective retention strategies, improve workplace culture, and address issues that contribute to employee dissatisfaction."
+        },
+        "2": {
+          "title": "Our recruitment process isn't yielding the results we need. What should we do?",
+          "text": "If you're struggling with recruitment, our Recruitment Assistance service can help. Partnering with our sister company, The Recruitment Consultants, we help find and attract top talent that fits your business needs."
+        },
+        "3": {
+          "title": "We need to update our HR policies, but we don't know where to start. Can you help?",
+          "text": "Updating HR policies can be complex. Our HR Documentation service offers comprehensive support for creating and refining policies, handbooks, and employment contracts, ensuring they meet legal requirements and align with your company's needs."
+        }
+      },
+      "button": "More FAQs"
+    },
+    "bookConsultation": {
+      "title": "Ready to Improve Your HR?",
+      "text": "Schedule a free consultation to discuss your HR <br />needs and discover how our services can help <br />your business succeed."
+    }
+  },
+  "requestButton": {
+    "label": "Book consultation"
+  }
+}
+ 
