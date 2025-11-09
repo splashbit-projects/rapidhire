@@ -19,7 +19,8 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params: { slug, locale } }) {
+export async function generateMetadata({ params }) {
+  const { slug, locale } = await params;
   const post = await getPost(slug, locale);
 
   return {
@@ -33,8 +34,10 @@ export async function generateMetadata({ params: { slug, locale } }) {
   };
 }
 
-const InsightSingle = async ({ params: { slug, locale } }) => {
+const InsightSingle = async ({ params }) => {
+  const { slug, locale } = await params;
   const post = await getPost(slug, locale);
+
   return (
     <>
       <section className="single-hero">

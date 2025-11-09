@@ -1,6 +1,6 @@
 import React from "react";
 import { getPost, getSlugs } from "@/utils/blogUtils";
-import Link from "next/link";
+import {Link} from '@/i18n/navigation'
 import ButtonArrow from "@/icons/ButtonArrow";
 import { getLocale, getTranslations } from "next-intl/server";
 

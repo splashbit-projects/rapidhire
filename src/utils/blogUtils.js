@@ -8,6 +8,10 @@ export async function getPost(slug, locale) {
     fileSlug = `IT-${slug}`;
   } else if (locale === "de") {
     fileSlug = `DE-${slug}`;
+  } else if (locale === 'zh') {
+    fileSlug = `ZH-${slug}`;
+  } else {
+    fileSlug = slug;
   }
 
   const text = await readFile(`./src/lib/blog/${fileSlug}.md`, "utf8");
