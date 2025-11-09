@@ -6,11 +6,12 @@ import KeyBenefits from "../_services_components/KeyBenefits";
 import ServicesLoop from "../_services_components/ServicesLoop";
 import ServicePricing from "../_services_components/ServicePricing";
 import {
-  keyBenefits,
-  services,
+  getKeyBenefits,
+  getServices,
 } from "@/lib/services/RecruitmentAssistance_Data";
-import { packages } from "@/lib/services/packages";
+import { getPackages } from "@/lib/services/packages";
 import Packages from "../_services_components/Packages";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Recruitment Assistance Services | Attract Top Talent",
@@ -24,31 +25,38 @@ export const metadata = {
   },
 };
 
-const RecruitmentAssistance = () => {
+const RecruitmentAssistance = async () => {
+  const t = await getTranslations("recruitmentAssistance");
+  const tp = await getTranslations("servicePackages");
+
+  const keyBenefits = getKeyBenefits(t);
+  const services = getServices(t);
+  const packages = getPackages(tp);
+  
   return (
     <>
       <ServiceHero
-        title={"Recruitment <span>Assistance</span>"}
+        title={`${t('hero.title.0', {fallback: "Recruitment"})} <span>${t('hero.title.1', {fallback: "Assistance"})}</span>`}
         subtitle={
-          "Expert support in finding and hiring the right talent for your business, streamlining the recruitment process for maximum efficiency and effectiveness."
+          t('hero.subtitle', {fallback: "Expert support in finding and hiring the right talent for your business, streamlining the recruitment process for maximum efficiency and effectiveness."})
         }
         info={
-          "Hiring the right talent is crucial to the success of any business, but the recruitment process can be time-consuming and complex. Our Recruitment Assistance service is designed to help you attract, assess, and hire the best candidates for your organisation. By partnering with Rapid HR Connect, you gain access to expert recruitment strategies, tools, and support that ensure you find the perfect fit for your team quickly and efficiently."
+          t('hero.info', {fallback: "Hiring the right talent is crucial to the success of any business, but the recruitment process can be time-consuming and complex. Our Recruitment Assistance service is designed to help you attract, assess, and hire the best candidates for your organisation. By partnering with Rapid HR Connect, you gain access to expert recruitment strategies, tools, and support that ensure you find the perfect fit for your team quickly and efficiently."})
         }
         image={"/images/services/recruitmentHero.png"}
       />
       <KeyBenefits benefits={keyBenefits} />
-      <ServicesLoop services={services} category={"Recruitment Assistance"} />
-      <Packages title={"HR Support Packages"} packages={packages} />
+      <ServicesLoop services={services} category={t('loop', {fallback: "Recruitment Assistance"})} />
+      <Packages title={t('packages', {fallback: "HR Support Packages"})} packages={packages} />
       <ServicePricing
         text={
-          "Looking for more information about our Recruitment Assistance service? <br/>Download our detailed pricing guide to explore how we can support your hiring needs with cost-effective solutions."
+          t('pricing', {fallback: "Looking for more information about our Recruitment Assistance service? <br/>Download our detailed pricing guide to explore how we can support your hiring needs with cost-effective solutions."})
         }
       />
       <BookConsultation
-        title={"Ready to Take the Next Step?"}
+        title={t('bookConsultation.title', {fallback: "Ready to Take the Next Step?"})}
         text={
-          "Finding the right talent is just a click away. Contact us today <br/>to discuss how our Recruitment Assistance service can help <br/>you hire the best candidates quickly and efficiently."
+          t('bookConsultation.text', {fallback: "Finding the right talent is just a click away. Contact us today <br/>to discuss how our Recruitment Assistance service can help <br/>you hire the best candidates quickly and efficiently."})
         }
       />
     </>

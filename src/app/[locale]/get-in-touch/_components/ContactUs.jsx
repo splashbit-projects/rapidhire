@@ -7,6 +7,8 @@ import Link from "next/link";
 import RequestForm from "@/global_components/RequestForm";
 
 const ContactUs = () => {
+  const t = useTranslations("contact.us");
+
   return (
     <section className="contact-us">
       <div className="_container">
@@ -18,10 +20,9 @@ const ContactUs = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Contact Us</h2>
+          <h2>{t("title", {fallback: "Contact Us"})}</h2>
           <p>
-            Have a question or need assistance? Fill out the form below, and our
-            team will respond promptly.
+            {t("description", {fallback: "Have a question or need assistance? Fill out the form below, and our team will respond promptly."})}
           </p>
         </motion.div>
         <div className="form-wrap">

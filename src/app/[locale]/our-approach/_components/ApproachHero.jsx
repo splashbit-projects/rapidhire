@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const ApproachHero = () => {
+  const t = useTranslations("ourApproach.hero");
+
   return (
     <section className="approach-hero">
       <div className="_container">
@@ -16,28 +19,21 @@ const ApproachHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Strategic Approach <br />
-              <span>to HR Management</span>
+              {t("title.0", {fallback: "Strategic Approach"})} <br />
+              <span>{t("title.1", {fallback: "to HR Management"})}</span>
             </motion.h1>
           </div>
           <div className="right">
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              At Rapid HR Connect, we believe that a one-size-fits-all approach
-              to HR simply doesn't work in today's dynamic business environment.
-              Every organisation is unique, with its own set of challenges and
-              opportunities. That's why we prioritise a tailored approach to HR
-              management, meticulously crafting strategies that align with your
-              business needs and goals. Our method not only addresses immediate
-              HR concerns but also drives sustainable growth and operational
-              efficiency. By partnering with us, you access customised solutions
-              that empower your workforce, mitigate risks, and position your
-              company for long-term success.
-            </motion.p>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            {t("description", {
+              fallback: "At Rapid HR Connect, we believe that a one-size-fits-all approach to HR simply doesn't work in today's dynamic business environment. Every organisation is unique, with its own set of challenges and opportunities. That's why we prioritise a tailored approach to HR management, meticulously crafting strategies that align with your business needs and goals. Our method not only addresses immediate HR concerns but also drives sustainable growth and operational efficiency. By partnering with us, you access customised solutions that empower your workforce, mitigate risks, and position your company for long-term success."
+            })}
+          </motion.p>
           </div>
         </div>
         <Image src="/images/approach/approachHero.png" width={1110} height={400} />

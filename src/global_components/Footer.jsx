@@ -1,8 +1,12 @@
 import React from "react";
 import "@/styles/footer.scss";
 import Link from "next/link";
+import {Link as NavLink} from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,62 +14,61 @@ const Footer = () => {
       <div className="foot-top">
         <div className="_container">
           <div>
-            <Link href="/" className="logo">
+            <NavLink href="/" className="logo">
               <img src="/images/logo-white.svg" width={235} alt="logo" />
-            </Link>
+            </NavLink>
             <p>
-              Rapid HR Connect: tailored HR <br />
-              solutions for your business
+              {t("title.0", {fallback: "Rapid HR Connect: tailored HR"})}<br />
+              {t("title.1", {fallback: "solutions for your business"})}
             </p>
             <div className="address">
               <div>
-                Registered address: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr,
-                193 Lockhart Rd, Wan Chai, Hong Kong
+                {t("registeredAddress", {fallback: "Registered address: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hong Kong"})}
               </div>
               {/*<div>
                 Office address: Office number 245, 8/FL, 28 Yee Wo St Causeway
                 Bay, Hong Kong
               </div> */}
               <div>
-                Email:{" "}
+                {t("email", {fallback: "Email:"})}{" "}
                 <Link href="mailto:info@rapidhrconnect.com">
                   info@rapidhrconnect.com
                 </Link>
               </div>
               <div>
-                Phone: <Link href="tel:+85230011568">+85230011568</Link>
+                {t("phone", {fallback: "Phone:"})}{' '}<Link href="tel:+85230011568">+85230011568</Link>
               </div>
             </div>
           </div>
           <div>
             <span></span>
-            <Link href="/retained-hr-support">Retained HR Support</Link>
-            <Link href="/hr-project-management">HR Project Management</Link>
-            <Link href="/flexible-hr-consultancy">Flexible HR Consultancy</Link>
-            <Link href="/recruitment-assistance">Recruitment Assistance</Link>
-            <Link href="/training-development">Training & Development</Link>
-            <Link href="/hr-documentation">HR Documentation</Link>
+            <NavLink href="/retained-hr-support">{t("services.0", {fallback: "Retained HR Support"})}</NavLink>
+            <NavLink href="/hr-project-management">{t("services.1", {fallback: "HR Project Management"})}</NavLink>
+            <NavLink href="/flexible-hr-consultancy">{t("services.2", {fallback: "Flexible HR Consultancy"})}</NavLink>
+            <NavLink href="/recruitment-assistance">{t("services.3", {fallback: "Recruitment Assistance"})}</NavLink>
+            <NavLink href="/training-development">{t("services.4", {fallback: "Training & Development"})}</NavLink>
+            <NavLink href="/hr-documentation">{t("services.5", {fallback: "HR Documentation"})}</NavLink>
           </div>
           <div>
             <span></span>
-            <Link href="/our-approach">Our approach</Link>
-            <Link href="/guides-and-insights">Guides and insights</Link>
-            <Link href="/why-choose-us">Why choose us</Link>
-            <Link href="/get-in-touch">Get in touch</Link>
-            <Link href="/faq">FAQ</Link>
+            <NavLink href="/our-approach">{t("links.0", {fallback: "Our approach"})}</NavLink>
+            <NavLink href="/guides-and-insights">{t("links.1", {fallback: "Guides and insights"})}</NavLink>
+            <NavLink href="/why-choose-us">{t("links.2", {fallback: "Why choose us"})}</NavLink>
+            <NavLink href="/get-in-touch">{t("links.3", {fallback: "Get in touch"})}</NavLink>
+            <NavLink href="/faq">{t("links.4", {fallback: "FAQ"})}</NavLink>
           </div>
           <div>
             <span></span>
-            <Link href="/terms-and-conditions">Terms and Conditions</Link>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/cookie-policy">Cookie Policy</Link>
-            <Link href="/refund-policy">Refund Policy</Link>
+            <NavLink href="/terms-and-conditions">{t("policies.0", {fallback: "Terms and Conditions"})}</NavLink>
+            <NavLink href="/privacy-policy">{t("policies.1", {fallback: "Privacy Policy"})}</NavLink>
+            <NavLink href="/cookie-policy">{t("policies.2", {fallback: "Cookie Policy"})}</NavLink>
+            <NavLink href="/refund-policy">{t("policies.3", {fallback: "Refund Policy"})}</NavLink>
           </div>
         </div>
       </div>
       <div className="foot-bottom">
         <div className="_container">
-          <span>© {currentYear} Rapidhire LTD. All Rights Reserved.</span>
+          <span>© {currentYear} Rapidhire LTD. {t("copyright", {fallback: "All Rights Reserved."})}</span>
 
           <div className="soc">
             <Link

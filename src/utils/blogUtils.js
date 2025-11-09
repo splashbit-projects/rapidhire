@@ -40,6 +40,8 @@ export async function getPage(slug, locale) {
     fileSlug = `IT-${slug}`;
   } else if (locale === "de") {
     fileSlug = `DE-${slug}`;
+  } else if (locale === 'zh') {
+    fileSlug = `ZH-${slug}`;
   }
 
   const text = await readFile(`./src/lib/policies/${fileSlug}.md`, "utf8");

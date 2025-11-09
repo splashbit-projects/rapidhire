@@ -8,6 +8,7 @@ import Commitment from "./_components/Commitment";
 import BookConsultation from "@/global_components/BookConsultation";
 import OurProposition from "./_components/OurProposition";
 import CommitmentToInnovation from "./_components/CommitmentToInnovation";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Why Choose Rapid HR Connect | Expert HR Solutions",
@@ -21,7 +22,9 @@ export const metadata = {
   },
 };
 
-const WhyChooseUs = () => {
+const WhyChooseUs = async () => {
+  const t = await getTranslations("whyChooseUs.bookConsultation");
+
   return (
     <>
       <WhyHero />
@@ -32,9 +35,9 @@ const WhyChooseUs = () => {
       <CommitmentToInnovation />
       <Commitment />
       <BookConsultation
-        title={"Ready to Improve Your HR?"}
+        title={t("title", {fallback: "Ready to Improve Your HR?"})}
         text={
-          "Schedule a free consultation to discuss your <br/>HR needs and discover how our services <br/>can help your business succeed."
+          t("text", {fallback: "Schedule a free consultation to discuss your <br/>HR needs and discover how our services <br/>can help your business succeed."})
         }
       />
     </>

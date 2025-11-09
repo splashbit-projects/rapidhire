@@ -6,8 +6,11 @@ import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
 import OrderButton from "@/global_components/OrderButton";
 import OrderPopup from "@/global_components/OrderPopup";
+import { useTranslations } from "next-intl";
 
 const ServicesLoop = ({ services, category }) => {
+  const t = useTranslations("services.loop");
+
   return (
     <>
       <section className="services-loop">
@@ -20,7 +23,7 @@ const ServicesLoop = ({ services, category }) => {
             variants={fadeInUp}
           >
             <Dots />
-            <h2>Services We Offer</h2>
+            <h2>{t("title", {fallback: "Services We Offer"})}</h2>
           </motion.div>
           <div className="services-loop__body">
             {services.map((service, index) => (

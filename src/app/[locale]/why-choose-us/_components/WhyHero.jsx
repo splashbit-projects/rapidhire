@@ -5,8 +5,11 @@ import { fadeInUp } from "@/utils/animations";
 import Image from "next/image";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const WhyHero = () => {
+  const t = useTranslations("whyChooseUs.hero");
+
   return (
     <section className="why-hero">
       <div className="_container">
@@ -18,7 +21,7 @@ const WhyHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Why Choose Rapid HR Connect?
+              {t("title", {fallback: "Why Choose Rapid HR Connect?"})}
             </motion.h1>
             <motion.div
               initial="hidden"
@@ -28,7 +31,7 @@ const WhyHero = () => {
               className="button-wrap"
             >
               <Link className="main-button" href="/get-in-touch">
-                <span>Contact us today</span>
+                <span>{t("link", {fallback: "Contact us today"})}</span>
                 <ButtonArrow />
               </Link>
             </motion.div>
@@ -40,9 +43,7 @@ const WhyHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Discover the advantages of partnering with a dedicated HR
-              consultancy that prioritises your business's success and employee
-              well-being.
+              {t("text", {fallback: "Discover the advantages of partnering with a dedicated HR consultancy that prioritises your business's success and employee well-being."})}
             </motion.p>
           </div>
         </div>

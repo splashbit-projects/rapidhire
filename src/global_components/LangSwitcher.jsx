@@ -1,11 +1,22 @@
+import { usePathname, useRouter } from "next/navigation";
 import Script from "next/script";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const LangSwitcher = () => {
   const [currentLang, setCurrentLang] = useState("en");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleLanguageChange = () => {}
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLanguageChange = useCallback(
+    (newLocale) => {
+      const cleanPath = pathname.replace(/^\/[a-zA-Z-]+/, "");
+      router.replace(`/${newLocale}${cleanPath}`);
+      setCurrentLang(newLocale);
+    },
+    [pathname, router]
+  );
 
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
@@ -45,7 +56,7 @@ const LangSwitcher = () => {
           }}
         >
           <li
-            onClick={() => handleLanguageChange("en", "EN")}
+            onClick={() => handleLanguageChange("en")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -64,7 +75,7 @@ const LangSwitcher = () => {
             English
           </li>
           <li
-            onClick={() => handleLanguageChange("de", "DE")}
+            onClick={() => handleLanguageChange("de")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -83,7 +94,7 @@ const LangSwitcher = () => {
             German
           </li>
           <li
-            onClick={() => handleLanguageChange("it", "IT")}
+            onClick={() => handleLanguageChange("it")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -102,7 +113,7 @@ const LangSwitcher = () => {
             Italian
           </li>
           <li
-            onClick={() => handleLanguageChange("zh-CN", "zh-CN")}
+            onClick={() => handleLanguageChange("zh")}
             style={{
               padding: "7px 0",
               cursor: "pointer",

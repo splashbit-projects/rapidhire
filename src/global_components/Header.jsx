@@ -2,12 +2,15 @@
 import React, { useEffect, useState } from "react";
 import "@/styles/header.scss";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import {Link as NavLink} from "@/i18n/navigation";
 import LangSwitcher from "./LangSwitcher";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const pathname = usePathname();
+
+  const t = useTranslations("header");
 
   const menuOpen = () => {
     setMenuOpened(!menuOpened);
@@ -25,13 +28,13 @@ const Header = () => {
       <header className={`${menuOpened && "menu-opened"}`}>
         <div className="_container">
           <div className="header-row">
-            <Link href="/" className="logo">
+            <NavLink href="/" className="logo">
               {!menuOpened ? (
                 <img src="/images/logo.svg" alt="logo" />
               ) : (
                 <img src="/images/logo.svg" alt="logo" />
               )}
-            </Link>
+            </NavLink>
 
             <div className="header-right">
               <LangSwitcher />
@@ -50,78 +53,78 @@ const Header = () => {
         <div className="_container">
           <nav>
             <div className="left-col">
-              <Link href="/" className={pathname == "/" ? "active" : ""}>
-                Home
-              </Link>
-              <Link
+              <NavLink href="/" className={pathname == "/" ? "active" : ""}>
+                {t("home", {fallback: "Home"})}
+              </NavLink>
+              <NavLink
                 href="/our-approach"
                 className={pathname == "/our-approach" ? "active" : ""}
               >
-                Our approach
-              </Link>
-              <Link
+                {t("ourApproach", {fallback: "Our Approach"})}
+              </NavLink>
+              <NavLink
                 href="/retained-hr-support"
                 className={pathname == "/retained-hr-support" ? "active" : ""}
               >
-                Retained HR Support
-              </Link>
-              <Link
+                {t("retainedHRSupport", {fallback: "Retained HR Support"})}
+              </NavLink>
+              <NavLink
                 href="/hr-project-management"
                 className={pathname == "/hr-project-management" ? "active" : ""}
               >
-                HR Project Management
-              </Link>
-              <Link
+                {t("hrProjectManagement", {fallback: "HR Project Management"})}
+              </NavLink>
+              <NavLink
                 href="/flexible-hr-consultancy"
                 className={
                   pathname == "/flexible-hr-consultancy" ? "active" : ""
                 }
               >
-                Flexible HR Consultancy
-              </Link>
-              <Link
+                {t("flexibleHRConsultancy", {fallback: "Flexible HR Consultancy"})}
+              </NavLink>
+              <NavLink
                 href="/recruitment-assistance"
                 className={
                   pathname == "/recruitment-assistance" ? "active" : ""
                 }
               >
-                Recruitment Assistance
-              </Link>
+                {t("recruitmentAssistance", {fallback: "Recruitment Assistance"})}
+              </NavLink>
             </div>
             <div className="right-col">
-              <Link
+              <NavLink
                 href="/training-development"
                 className={pathname == "/training-development" ? "active" : ""}
               >
-                Training & Development
-              </Link>
-              <Link
+                {t("trainingDevelopment", {fallback: "Training & Development"})}
+              </NavLink>
+              <NavLink
                 href="/hr-documentation"
                 className={pathname == "/hr-documentation" ? "active" : ""}
               >
-                HR Documentation
-              </Link>
-              <Link
+                {t("hrDocumentation", {fallback: "HR Documentation"})}
+              </NavLink>
+              <NavLink
                 href="/guides-and-insights"
                 className={pathname == "/guides-and-insights" ? "active" : ""}
               >
-                Guides and insights
-              </Link>
-              <Link
+                {t("guidesAndInsights", {fallback: "Guides and insights"})}
+              </NavLink>
+              <NavLink
                 href="/why-choose-us"
                 className={pathname == "/why-choose-us" ? "active" : ""}
               >
-                Why choose us
-              </Link>
-              <Link
+                {t("whyChooseUs", {fallback: "Why choose us"})}
+              </NavLink>
+              <NavLink
                 href="/get-in-touch"
                 className={pathname == "/get-in-touch" ? "active" : ""}
               >
-                Get in touch
-              </Link>
-              <Link href="/faq" className={pathname == "/faq" ? "active" : ""}>
-                FAQ
-              </Link>
+                {t("getInTouch", {fallback: "Get in touch"})}
+              </NavLink>
+              <NavLink href="/faq" className={pathname == "/faq" ? "active" : ""}>
+                {t("faq", {fallback: "FAQ"})}
+              </NavLink>
             </div>
           </nav>
         </div>

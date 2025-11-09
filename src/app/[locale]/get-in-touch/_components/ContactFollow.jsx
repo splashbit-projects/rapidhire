@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Dots from "@/icons/Dots";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const ContactFollow = () => {
+  const t = useTranslations("contact.follow");
+
   return (
     <section className="contact-follow">
       <div className="_container">
@@ -17,10 +20,9 @@ const ContactFollow = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Follow Us</h2>
+          <h2>{t("title", {fallback: "Follow Us"})}</h2>
           <p>
-            Stay connected with us on social media for the latest updates,
-            insights, and HR tips:
+            {t("description", {fallback: "Stay connected with us on social media for the latest updates, insights, and HR tips:"})}
           </p>
         </motion.div>
         <div className="soc">

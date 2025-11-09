@@ -6,11 +6,12 @@ import KeyBenefits from "../_services_components/KeyBenefits";
 import ServicesLoop from "../_services_components/ServicesLoop";
 import ServicePricing from "../_services_components/ServicePricing";
 import {
-  keyBenefits,
-  services,
+  getKeyBenefits,
+  getServices,
 } from "@/lib/services/FlexibleHRConsultancy_Data";
 import Packages from "../_services_components/Packages";
-import { packages } from "@/lib/services/packages";
+import { getPackages } from "@/lib/services/packages";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Flexible HR Consultancy Services | Tailored HR Expertise",
@@ -24,31 +25,38 @@ export const metadata = {
   },
 };
 
-const FlexibleHRConsultancy = () => {
+const FlexibleHRConsultancy = async () => {
+  const t = await getTranslations("flexibleHRConsultancy");
+  const tp = await getTranslations("servicePackages");
+
+  const keyBenefits = getKeyBenefits(t);
+  const services = getServices(t);
+  const packages = getPackages(tp);
+
   return (
     <>
       <ServiceHero
-        title={"Flexible HR <span>Consultancy</span>"}
+        title={t("hero.title", {fallback: "Flexible HR Consultancy"})}
         subtitle={
-          "Tailored HR expertise at your fingertips, providing the flexibility you need to address your unique business challenges."
+          t("hero.subtitle", {fallback: "Tailored HR expertise at your fingertips, providing the flexibility you need to address your unique business challenges."})
         }
         info={
-          "Every business faces different HR challenges, and there's no one-size-fits-all solution. That's why our Flexible HR Consultancy service offers you the expertise and support you need exactly when needed. Whether you require strategic advice, specific project assistance, or ongoing HR support, we tailor our consultancy services to fit your business needs. With Rapid HR Connect, you can scale your HR support up or down as your business evolves."
+          t("hero.info", {fallback: "Every business faces different HR challenges, and there's no one-size-fits-all solution. That's why our Flexible HR Consultancy service offers you the expertise and support you need exactly when needed. Whether you require strategic advice, specific project assistance, or ongoing HR support, we tailor our consultancy services to fit your business needs. With Rapid HR Connect, you can scale your HR support up or down as your business evolves."})
         }
         image={"/images/services/flexibleHero.png"}
       />
       <KeyBenefits benefits={keyBenefits} />
-      <ServicesLoop services={services} category={"Retained HR Support"} />
-      <Packages title={"HR Support Packages"} packages={packages} />
+      <ServicesLoop services={services} category={t("loop.category", {fallback: "Retained HR Support"})} />
+      <Packages title={t("packages.title", {fallback: "HR Support Packages"})} packages={packages} />
       <ServicePricing
         text={
-          "Interested in our Flexible HR Consultancy services? <br/>Download our detailed pricing guide to see how we can customise our offerings to fit your specific business needs."
+          t("pricing.text", {fallback: "Interested in our Flexible HR Consultancy services? <br/>Download our detailed pricing guide to see how we can customise our offerings to fit your specific business needs."})
         }
       />
       <BookConsultation
-        title={"Ready to Take the Next Step?"}
+        title={t("bookConsultation.title", {fallback: "Ready to Take the Next Step?"})}
         text={
-          "Whether you need a quick consultation or ongoing HR support, we're <br/>here to help. Contact us today to discuss how our Flexible HR Consultancy <br/>services can be tailored to meet your business's unique needs."
+          t("bookConsultation.text", {fallback: "Whether you need a quick consultation or ongoing HR support, we're <br/>here to help. Contact us today to discuss how our Flexible HR Consultancy <br/>services can be tailored to meet your business's unique needs."})
         }
       />
     </>

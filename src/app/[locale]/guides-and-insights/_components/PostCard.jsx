@@ -2,6 +2,7 @@ import React from "react";
 import { getPost, getSlugs } from "@/utils/blogUtils";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
   const slugs = await getSlugs();
@@ -19,9 +20,11 @@ export async function generateStaticParams() {
   return params;
 }
 
-const PostCard = async ({ slug, locale }) => {
+const PostCard = async ({ slug }) => {
+  const locale = await getLocale();
   const post = await getPost(slug, locale);
-  //console.log(post);
+
+  const t = await getTranslations("guidesANdInsights.postCard");
 
   return (
     <div className="post">
@@ -36,7 +39,7 @@ const PostCard = async ({ slug, locale }) => {
           <p>{post.excerpt}</p>
         </div>
         <Link href={`/guides-and-insights/${slug}`} className="main-button">
-          <span>Read more</span>
+          <span>{t("title", {fallback: "Read more"})}</span>
           <ButtonArrow />
         </Link>
       </div>

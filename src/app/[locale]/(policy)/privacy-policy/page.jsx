@@ -1,6 +1,7 @@
 import { getPage, getPageSlugs } from "@/utils/blogUtils";
 import React from "react";
 import "@/styles/policy.scss";
+import { getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
   const slugs = await getPageSlugs();
@@ -20,6 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }) {
   const page = await getPage("privacy-policy", locale);
+  const t = await getTranslations("policies");
 
   return {
     title: page.title,
@@ -30,15 +32,18 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-const TermsAndConditions = async () => {
-  const page = await getPage("privacy-policy");
+const TermsAndConditions = async ({params}) => {
+  const {locale} = await params;
+  const page = await getPage("privacy-policy", locale);
+  const t = await getTranslations("policies");
+  
   return (
     <>
       <section className="policy-hero">
         <div className="_container">
           <div className="policy-hero__body">
             <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
-            {page.date && <div className="date">Last updated: {page.date}</div>}
+            {page.date && <div className="date">{t("lastUpdated", {fallback: "Last updated:"})} {page.date}</div>}
           </div>
         </div>
       </section>

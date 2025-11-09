@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Dots from "@/icons/Dots";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const ContactInfo = () => {
+  const t = useTranslations("contact.info");
+
   return (
     <section className="contact-info">
       <div className="_container">
@@ -17,13 +20,13 @@ const ContactInfo = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Contact Information</h2>
+          <h2>{t("title", {fallback: "Contact Information"})}</h2>
         </motion.div>
         <div className="contact-info__top">
           <div>
             <div>
               <img src="/images/home/arrow.svg" />
-              <h3>Registered Address</h3>
+              <h3>{t("registeredAddress", {fallback: "Registered Address"})}</h3>
               <p>
                 Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan
                 Chai, Hong Kong
@@ -37,7 +40,7 @@ const ContactInfo = () => {
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
           </div>
           {/*<div>
             <div>

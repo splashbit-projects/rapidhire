@@ -6,6 +6,7 @@ import BookConsultation from "../../../global_components/BookConsultation";
 import HowWeWork from "./_components/HowWeWork";
 import KeyMethodologies from "./_components/KeyMethodologies";
 import ClientCollaboration from "./_components/ClientCollaboration";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Strategic HR Management | Tailored Solutions for Business Success",
@@ -19,7 +20,9 @@ export const metadata = {
   },
 };
 
-const OurApproach = () => {
+const OurApproach = async () => {
+  const t = await getTranslations("ourApproach.bookConsultation");
+
   return (
     <>
       <ApproachHero />
@@ -28,9 +31,9 @@ const OurApproach = () => {
       <KeyMethodologies />
       <ClientCollaboration />
       <BookConsultation
-        title={"Ready to Improve Your HR?"}
+        title={t("title", {fallback: "Ready to Improve Your HR?"})}
         text={
-          "Schedule a free consultation to discuss your HR <br />needs and discover how our services can help <br />your business succeed."
+          t("text", {fallback: "Schedule a free consultation to discuss your HR <br />needs and discover how our services can help <br />your business succeed."})
         }
       />
     </>

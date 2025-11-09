@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Dots from "@/icons/Dots";
+import { useTranslations } from "next-intl";
 
 const OurPhilosophy = () => {
+  const t = useTranslations("ourApproach.ourPhilosophy");
+
   return (
     <section className="our-philosophy">
       <div className="_container">
@@ -16,7 +19,7 @@ const OurPhilosophy = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Our Philosophy</h2>
+          <h2>{t("title", {fallback: "Our Philosophy"})}</h2>
         </motion.div>
         <div className="our-philosophy__body">
           <div className="back"></div>
@@ -30,13 +33,9 @@ const OurPhilosophy = () => {
               variants={fadeInUp}
             >
               <img src="/images/approach/icon1.svg" />
-              <h3>Proactive Management</h3>
+              <h3>{t("items.0.title", {fallback: "Proactive Management"})}</h3>
               <p>
-                Staying ahead of potential issues is critical to maintaining
-                smooth operations. Our proactive management approach involves
-                anticipating challenges before they arise, allowing us to
-                implement solutions that prevent disruptions and keep your
-                business on track.
+                {t("items.0.text", {fallback: "Staying ahead of potential issues is critical to maintaining smooth operations. Our proactive management approach involves anticipating challenges before they arise, allowing us to implement solutions that prevent disruptions and keep your business on track."})}
               </p>
             </motion.div>
           </div>
@@ -49,13 +48,9 @@ const OurPhilosophy = () => {
               variants={fadeInUp}
             >
               <img src="/images/approach/icon2.svg" />
-              <h3>Collaboration</h3>
+              <h3>{t("items.1.title", {fallback: "Collaboration"})}</h3>
               <p>
-                We see ourselves as your partners in success. By working closely
-                with you, we ensure our HR strategies fully integrate with your
-                business objectives. This collaborative approach ensures that
-                our solutions are practical and resonate with your company's
-                culture and vision.
+                {t("items.1.text", {fallback: "We see ourselves as your partners in success. By working closely with you, we ensure our HR strategies fully integrate with your business objectives. This collaborative approach ensures that our solutions are practical and resonate with your company's culture and vision."})}
               </p>
             </motion.div>
           </div>
@@ -70,13 +65,9 @@ const OurPhilosophy = () => {
               variants={fadeInUp}
             >
               <img src="/images/approach/icon3.svg" />
-              <h3>Customization</h3>
+              <h3>{t("items.2.title", {fallback: "Customization"})}</h3>
               <p>
-                We believe in the power of tailored HR solutions. Every business
-                is unique, so we take the time to understand your specific
-                challenges and goals. Our customised strategies ensure that your
-                HR processes are aligned with your business needs, leading to
-                more effective and impactful outcomes.
+                {t("items.2.text", {fallback: "We believe in the power of tailored HR solutions. Every business is unique, so we take the time to understand your specific challenges and goals. Our customised strategies ensure that your HR processes are aligned with your business needs, leading to more effective and impactful outcomes."})}
               </p>
             </motion.div>
           </div>

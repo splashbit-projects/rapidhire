@@ -8,8 +8,11 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import ButtonArrow from "@/icons/ButtonArrow";
 import { excludedCountries } from "@/utils/countries";
+import { useTranslations } from "next-intl";
 
 function OrderPopup() {
+  const t = useTranslations("orderPopup");
+
   const {
     orderPopupDisplay,
     setOrderPopupDisplay,
@@ -20,18 +23,18 @@ function OrderPopup() {
   const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("This field is required!"),
+    name: Yup.string().required(t("errors.fieldRequired", {fallback: "This field is required!"})),
     email: Yup.string()
-      .email("Invalid email address")
-      .required("This field is required!"),
-    phone: Yup.string().required("This field is required!"),
+      .email(t("errors.invalidEmail", {fallback: "Invalid email address"}))
+      .required(t("errors.fieldRequired", {fallback: "This field is required!"})),
+    phone: Yup.string().required(t("errors.fieldRequired", {fallback: "This field is required!"})),
   });
 
   const initialValues = {
     name: "",
     email: "",
     additional: "",
-    service: `${serviceValue} Request`,
+    service: `${serviceValue} ${t("request", {fallback: "Request"})}`,
   };
 
   const closePopup = (resetForm) => {
@@ -109,9 +112,9 @@ function OrderPopup() {
                       <div className="thanks-message full">
                         <img src="/images/success.svg" />
                         <span>
-                          Thank you for choosing Rapid HR Connect!
+                          {t("thanks.0", {fallback: "Thank you for choosing Rapid HR Connect!"})}
                           <br />
-                          Our representative will reach out to you shortly.
+                          {t("thanks.1", {fallback: "Our representative will reach out to you shortly."})}
                         </span>
                       </div>
                     ) : (
@@ -127,7 +130,7 @@ function OrderPopup() {
                           <Field
                             name="name"
                             type="text"
-                            placeholder="Full Name*"
+                            placeholder={t("fullName", {fallback: "Full Name*"})}
                             className={
                               touched.name && errors.name ? "invalid" : ""
                             }
@@ -143,7 +146,7 @@ function OrderPopup() {
                           <Field
                             name="email"
                             type="email"
-                            placeholder="Email Address*"
+                            placeholder={t("emailAddress", {fallback: "Email Address*"})}
                             className={
                               touched.email && errors.email ? "invalid" : ""
                             }
@@ -161,7 +164,7 @@ function OrderPopup() {
                             excludeCountries={excludedCountries}
                             value=""
                             onChange={(value) => setFieldValue("phone", value)}
-                            placeholder="Phone Number*"
+                            placeholder={t("phoneNumber", {fallback: "Phone Number*"})}
                             className={
                               touched.phone && errors.phone ? "invalid" : ""
                             }
@@ -173,7 +176,7 @@ function OrderPopup() {
                           <Field
                             name="additional"
                             as="textarea"
-                            placeholder="Your Message"
+                            placeholder={t("yourMessage", {fallback: "Your Message"})}
                             className={
                               touched.additional && errors.additional
                                 ? "invalid"
@@ -194,7 +197,8 @@ function OrderPopup() {
                           } main-button`}
                           disabled={isSubmitting}
                         >
-                          <span>Send</span>
+                          <span>{t("send", {fallback: "Send"})}
+                          </span>
                           <ButtonArrow />
                         </button>
                       </>

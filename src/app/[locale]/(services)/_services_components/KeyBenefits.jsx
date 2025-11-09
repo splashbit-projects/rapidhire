@@ -5,8 +5,11 @@ import { fadeInUp } from "@/utils/animations";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Dots from "@/icons/Dots";
+import { useTranslations } from "next-intl";
 
 const KeyBenefits = ({ benefits }) => {
+  const t = useTranslations("services.keyBenefits");
+
   return (
     <section className="key-benefits">
       <div className="_container">
@@ -18,7 +21,7 @@ const KeyBenefits = ({ benefits }) => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>Key Benefits</h2>
+          <h2>{t("title", {fallback: "Key Benefits"})}</h2>
         </motion.div>
         <div className="key-benefits__body">
           <motion.div

@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import OrderButton from "@/global_components/OrderButton";
+import { useTranslations } from "next-intl";
 
 const Packages = ({ title, packages }) => {
+  const t = useTranslations("services.packages");
+
   return (
     <section className="packages">
       <div className="_container">
@@ -34,12 +37,11 @@ const Packages = ({ title, packages }) => {
                 <p>{pack.description}</p>
               </div>
               <div>
-                <h4>Included services:</h4>
+                <h4>{t("includedServices", {fallback: "Included services:"})}</h4>
                 <div dangerouslySetInnerHTML={{ __html: pack.included }} />
               </div>
-
               <OrderButton
-                text={"Order now"}
+                text={t("text", {fallback: "Order now"})}
                 serviceName={pack.title}
                 type={"package"}
               />

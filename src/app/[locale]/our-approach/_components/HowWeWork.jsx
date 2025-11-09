@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Dots from "@/icons/Dots";
+import { useTranslations } from "next-intl";
 
 const HowWeWork = () => {
+  const t = useTranslations("ourApproach.howWeWork");
+
   return (
     <section className="how-work">
       <div className="_container">
@@ -16,11 +19,10 @@ const HowWeWork = () => {
           variants={fadeInUp}
         >
           <Dots />
-          <h2>How We Work</h2>
+          <h2>{t("title", {fallback: "How We Work"})}</h2>
           <p>
-            Our systematic and thorough approach ensures that every step of our
-            process is designed <br />
-            to deliver maximum value to your business. Here's how we work:
+            {t('description.0', {fallback: 'Our systematic and thorough approach ensures that every step of our process is designed'})} <br />
+            {t('description.1', {fallback: 'to deliver maximum value to your business. Here\'s how we work:'})}
           </p>
         </motion.div>
         <div className="how-work__body">
@@ -34,18 +36,13 @@ const HowWeWork = () => {
             <div className="left">
               <span>01</span>
               <p>
-                Comprehensive <br />
-                Assessment
+                {t("items.0.title.0", {fallback: "Comprehensive"})} <br />
+                {t("items.0.title.1", {fallback: "Assessment"})}
               </p>
             </div>
             <img src="/images/approach/divider.svg" />
             <div className="right">
-              Our process begins with a detailed evaluation of your current HR
-              setup. We dive deep into your existing practices, policies, and
-              procedures to identify potential risks, gaps, and areas for
-              improvement. This assessment helps us understand your business
-              environment and specific HR needs, laying the foundation for a
-              tailored approach that addresses your unique challenges.
+              {t("items.0.text", {fallback: "Our process begins with a detailed evaluation of your current HR setup. We dive deep into your existing practices, policies, and procedures to identify potential risks, gaps, and areas for improvement. This assessment helps us understand your business environment and specific HR needs, laying the foundation for a tailored approach that addresses your unique challenges."})}
             </div>
           </motion.div>
           <motion.div
@@ -58,19 +55,13 @@ const HowWeWork = () => {
             <div className="left">
               <span>02</span>
               <p>
-                Customised <br />
-                Solutions
+                {t("items.1.title.0", {fallback: "Customised"})} <br />
+                {t("items.1.title.1", {fallback: "Solutions"})}
               </p>
             </div>
             <img src="/images/approach/divider.svg" />
             <div className="right">
-              Once we thoroughly understand your HR landscape, we develop
-              strategies specifically designed to meet your business objectives.
-              Our solutions are not off-the-shelf; they are crafted to address
-              your challenges, improve employee engagement, enhance compliance,
-              or optimise talent acquisition processes. We ensure that each
-              strategy aligns with your company's goals and culture, providing
-              you with HR solutions that are both effective and relevant.
+              {t("items.1.text", {fallback: "Once we thoroughly understand your HR landscape, we develop strategies specifically designed to meet your business objectives. Our solutions are not off-the-shelf; they are crafted to address your challenges, improve employee engagement, enhance compliance, or optimise talent acquisition processes. We ensure that each strategy aligns with your company's goals and culture, providing you with HR solutions that are both effective and relevant."})}
             </div>
           </motion.div>
           <motion.div
@@ -83,19 +74,13 @@ const HowWeWork = () => {
             <div className="left">
               <span>03</span>
               <p>
-                Implementation <br />
-                Support
+                {t("items.2.title.0", {fallback: "Implementation"})} <br />
+                {t("items.2.title.1", {fallback: "Support"})}
               </p>
             </div>
             <img src="/images/approach/divider.svg" />
             <div className="right">
-              Developing a strategy is only the beginning. We stand by your side
-              through the implementation phase, offering hands-on support to
-              ensure a smooth transition. This includes comprehensive training
-              for your team, clear guidance on new processes, and tools to help
-              manage the change effectively. We aim to integrate new HR
-              practices seamlessly into your business operations, minimising
-              disruptions and maximising benefits.
+              {t("items.2.text", {fallback: "Developing a strategy is only the beginning. We stand by your side through the implementation phase, offering hands-on support to ensure a smooth transition. This includes comprehensive training for your team, clear guidance on new processes, and tools to help manage the change effectively. We aim to integrate new HR practices seamlessly into your business operations, minimising disruptions and maximising benefits."})}
             </div>
           </motion.div>
           <motion.div
@@ -108,20 +93,13 @@ const HowWeWork = () => {
             <div className="left">
               <span>04</span>
               <p>
-                Ongoing Monitoring <br />
-                and Adjustment
+                {t("items.3.title.0", {fallback: "Ongoing Monitoring"})} <br />
+                {t("items.3.title.1", {fallback: "and Adjustment"})}
               </p>
             </div>
             <img src="/images/approach/divider.svg" />
             <div className="right">
-              HR is not static, nor are our solutions. After implementation, we
-              continue to monitor the effectiveness of the new processes,
-              gathering feedback and analysing performance data. If adjustments
-              are needed, we proactively make the necessary changes to ensure
-              that your HR strategies continue to meet your evolving needs. This
-              ongoing support ensures that your HR functions align with your
-              business goals, driving continuous improvement and long-term
-              success.
+              {t("items.3.text", {fallback: "HR is not static, nor are our solutions. After implementation, we continue to monitor the effectiveness of the new processes, gathering feedback and analysing performance data. If adjustments are needed, we proactively make the necessary changes to ensure that your HR strategies continue to meet your evolving needs. This ongoing support ensures that your HR functions align with your business goals, driving continuous improvement and long-term success."})}
             </div>
           </motion.div>
         </div>

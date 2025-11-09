@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/utils/animations";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const WhatClientsSay = () => {
+  const t = useTranslations("whyChooseUs.whatClientSay");
+
   return (
     <section className="what-clients-say">
       <div className="_container">
@@ -17,12 +20,11 @@ const WhatClientsSay = () => {
               variants={fadeInLeft}
             >
               <h2>
-                What Our <br />
-                <span>Clients Say</span>
+                {t("title.0", {fallback: "What Our"})} <br />
+                <span>{t("title.1", {fallback: "Clients Say"})}</span>
               </h2>
               <p>
-                We pride ourselves on our positive impact on our clients, and
-                their feedback speaks volumes about the quality of our services.
+                {t("text", {fallback: "We pride ourselves on our positive impact on our clients, and their feedback speaks volumes about the quality of our services."})}
               </p>
             </motion.div>
             <motion.div
@@ -46,13 +48,11 @@ const WhatClientsSay = () => {
               variants={fadeInUp}
             >
               <p>
-                “Rapid HR Connect quickly became an integral part of our team,
-                offering invaluable guidance that helped us navigate complex HR
-                challenges. Their expertise is unmatched!”
+                {t('reviews.0.text', {fallback: "“Rapid HR Connect quickly became an integral part of our team, offering invaluable guidance that helped us navigate complex HR challenges. Their expertise is unmatched!”"})}
               </p>
               <div className="details">
-                <span>Sophia Chen</span>
-                <span>COO of Zenith Horizons</span>
+                <span>{t('reviews.0.author', {fallback: "Sophia Chen"})}</span>
+                <span>{t('reviews.0.position', {fallback: "COO of Zenith Horizons"})}</span>
               </div>
             </motion.div>
             <motion.div
@@ -62,13 +62,11 @@ const WhatClientsSay = () => {
               variants={fadeInUp}
             >
               <p>
-                “Thanks to Rapid HR Connect, our recruitment process has been
-                streamlined, allowing us to attract top talent easily. Their
-                proactive approach made all the difference.”
+                {t('reviews.1.text', {fallback: "“Thanks to Rapid HR Connect, our recruitment process has been streamlined, allowing us to attract top talent easily. Their proactive approach made all the difference.”"})}
               </p>
               <div className="details">
-                <span>Michael Harper</span>
-                <span>HR Director at EchoWave Innovations</span>
+                <span>{t('reviews.1.author', {fallback: "Michael Harper"})}</span>
+                <span>{t('reviews.1.position', {fallback: "HR Director at EchoWave Innovations"})}</span>
               </div>
             </motion.div>
             <motion.div
@@ -78,13 +76,11 @@ const WhatClientsSay = () => {
               variants={fadeInUp}
             >
               <p>
-                “The training and development programs designed by Rapid HR
-                Connect have significantly boosted our team’s productivity.
-                Their tailored solutions truly address our unique needs.”
+                {t('reviews.2.text', {fallback: "“The training and development programs designed by Rapid HR Connect have significantly boosted our team’s productivity. Their tailored solutions truly address our unique needs.”"})}
               </p>
               <div className="details">
-                <span>David Renshaw</span>
-                <span>HR Director at Pinnacle Systems</span>
+                <span>{t('reviews.2.author', {fallback: "David Renshaw"})}</span>
+                <span>{t('reviews.2.position', {fallback: "HR Director at Pinnacle Systems"})}</span>
               </div>
             </motion.div>
           </div>

@@ -9,8 +9,11 @@ import useCountryCode from "@/utils/useCountryCode";
 import ButtonArrow from "@/icons/ButtonArrow";
 import Select from "react-select";
 import { excludedCountries } from "@/utils/countries";
+import { useTranslations } from "next-intl";
 
 function RequestPopup() {
+  const t = useTranslations("requestForm");
+
   const {
     requestPopupDisplay,
     setRequestPopupDisplay,
@@ -21,18 +24,18 @@ function RequestPopup() {
   const countryCode = useCountryCode();
 
   const serviceTypes = [
-    { value: "Retained HR Support", label: "Retained HR Support" },
-    { value: "HR Project Management", label: "HR Project Management" },
-    { value: "Flexible HR Consultancy", label: "Flexible HR Consultancy" },
-    { value: "Recruitment Assistance", label: "Recruitment Assistance" },
-    { value: "Training & Development", label: "Training & Development" },
-    { value: "HR Documentation", label: "HR Documentation" },
+    { value: t("services.0", {fallback: "Retained HR Support"}), label: t("services.0", {fallback: "Retained HR Support"}) },
+    { value: t("services.1", {fallback: "HR Project Management"}), label: t("services.1", {fallback: "HR Project Management"}) },
+    { value: t("services.2", {fallback: "Flexible HR Consultancy"}), label: t("services.2", {fallback: "Flexible HR Consultancy"}) },
+    { value: t("services.3", {fallback: "Recruitment Assistance"}), label: t("services.3", {fallback: "Recruitment Assistance"}) },
+    { value: t("services.4", {fallback: "Training & Development"}), label: t("services.4", {fallback: "Training & Development"}) },
+    { value: t("services.5", {fallback: "HR Documentation"}), label: t("services.5", {fallback: "HR Documentation"}) },
   ];
 
   const contactMethods = [
-    { value: "Email", label: "Email" },
-    { value: "Phone", label: "Phone" },
-    { value: "Other", label: "Other" },
+    { value: t("contactMethods.0", {fallback: "Email"}), label: t("contactMethods.0", {fallback: "Email"}) },
+    { value: t("contactMethods.1", {fallback: "Phone"}), label: t("contactMethods.1", {fallback: "Phone"}) },
+    { value: t("contactMethods.2", {fallback: "Other"}), label: t("contactMethods.2", {fallback: "Other"}) },
   ];
 
   const customStyles = {
@@ -110,12 +113,12 @@ function RequestPopup() {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("This field is required!"),
+    name: Yup.string().required(t("errors.fieldRequired", {fallback: "This field is required!"})),
     email: Yup.string()
-      .email("Invalid email address")
-      .required("This field is required!"),
-    phone: Yup.string().required("This field is required!"),
-    serviceType: Yup.string().required("This field is required!"),
+      .email(t("errors.invalidEmail", {fallback: "Invalid email address"}))
+      .required(t("errors.fieldRequired", {fallback: "This field is required!"})),
+    phone: Yup.string().required(t("errors.fieldRequired", {fallback: "This field is required!"})),
+    serviceType: Yup.string().required(t("errors.fieldRequired", {fallback: "This field is required!"})),
     description: Yup.string(),
     goals: Yup.string(),
     method: Yup.string(),
@@ -207,8 +210,8 @@ function RequestPopup() {
                       <div className="thanks-message full">
                         <img src="/images/success.svg" />
                         <span>
-                          Thank you for choosing Rapid HR Connect! <br />
-                          Our representative will reach out to you shortly.
+                          {t("thanks.0", {fallback: "Thank you for choosing Rapid HR Connect!"})} <br />
+                          {t("thanks.1", {fallback: "Our representative will reach out to you shortly."})}
                         </span>
                       </div>
                     ) : (
@@ -217,7 +220,7 @@ function RequestPopup() {
                           <Field
                             name="name"
                             type="text"
-                            placeholder="Your Full Name"
+                            placeholder={t("fullName", {fallback: "Your Full Name"})}
                             className={
                               touched.name && errors.name ? "invalid" : ""
                             }
@@ -233,7 +236,7 @@ function RequestPopup() {
                           <Field
                             name="email"
                             type="email"
-                            placeholder="Your Email Address"
+                            placeholder={t("emailAddress", {fallback: "Your Email Address"})}
                             className={
                               touched.email && errors.email ? "invalid" : ""
                             }
@@ -251,7 +254,7 @@ function RequestPopup() {
                             value=""
                             excludeCountries={excludedCountries}
                             onChange={(value) => setFieldValue("phone", value)}
-                            placeholder="Your Contact Number"
+                            placeholder={t("phoneNumber", {fallback: "Your Contact Number"})}
                             className={
                               touched.phone && errors.phone ? "invalid" : ""
                             }
@@ -272,7 +275,7 @@ function RequestPopup() {
                             onChange={(option) =>
                               setFieldValue("serviceType", option.value)
                             }
-                            placeholder="Service Type"
+                            placeholder={t("serviceType", {fallback: "Service Type"})}
                           />
                           <ErrorMessage
                             name="serviceType"
@@ -285,7 +288,7 @@ function RequestPopup() {
                           <Field
                             name="description"
                             as="textarea"
-                            placeholder="Briefly Describe Your HR Needs or Issues"
+                            placeholder={t("description", {fallback: "Briefly Describe Your HR Needs or Issues"})}
                             className={
                               touched.description && errors.description
                                 ? "invalid small"
@@ -303,7 +306,7 @@ function RequestPopup() {
                           <Field
                             name="goals"
                             as="textarea"
-                            placeholder="What Are Your Main HR Goals and Objectives?"
+                            placeholder={t("goals", {fallback: "What Are Your Main HR Goals and Objectives?"})}
                             className={
                               touched.goals && errors.goals
                                 ? "invalid small"
@@ -321,7 +324,7 @@ function RequestPopup() {
                           <Field
                             name="additional"
                             as="textarea"
-                            placeholder="Any Other Details or Specific Requirements You’d Like to Share"
+                            placeholder={t("additional", {fallback: "Any Other Details or Specific Requirements You’d Like to Share"})}
                             className={
                               touched.additional && errors.additional
                                 ? "invalid small"
@@ -346,7 +349,7 @@ function RequestPopup() {
                             onChange={(option) =>
                               setFieldValue("method", option.value)
                             }
-                            placeholder="Preferred Contact Method"
+                            placeholder={t("method", {fallback: "Preferred Contact Method"})}
                           />
                           <ErrorMessage
                             name="method"
@@ -359,7 +362,7 @@ function RequestPopup() {
                           <Field
                             name="time"
                             type="text"
-                            placeholder="Preferred Contact Time"
+                            placeholder={t("time", {fallback: "Preferred Contact Time"})}
                             className={
                               touched.time && errors.time ? "invalid" : ""
                             }
@@ -378,7 +381,8 @@ function RequestPopup() {
                           } main-button`}
                           disabled={isSubmitting}
                         >
-                          <span>Send</span>
+                          <span>{t("send", {fallback: "Send"})}
+                          </span>
                           <ButtonArrow />
                         </button>
                       </>
