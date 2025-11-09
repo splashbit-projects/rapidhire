@@ -1,0 +1,63 @@
+import "@/styles/services.scss";
+import BookConsultation from "@/global_components/BookConsultation";
+import React from "react";
+import ServiceHero from "../_services_components/ServiceHero";
+import KeyBenefits from "../_services_components/KeyBenefits";
+import ServicesLoop from "../_services_components/ServicesLoop";
+import ServicePricing from "../_services_components/ServicePricing";
+import { getKeyBenefits, getServices } from "@/lib/services/HRDocumentation_Data";
+import Packages from "../_services_components/Packages";
+import { getPackages } from "@/lib/services/packages";
+import { getTranslations } from "next-intl/server";
+
+export const metadata = {
+  title: "HR Documentation Services | Ensure Compliance and Clarity",
+  description:
+    "Keep your HR practises compliant and organised with our comprehensive HR documentation services. Rapid HR Connect provides expert support for all your documentation needs.",
+  openGraph: {
+    title: "HR Documentation Services | Ensure Compliance and Clarity",
+    description:
+      "Keep your HR practises compliant and organised with our comprehensive HR documentation services. Rapid HR Connect provides expert support for all your documentation needs.",
+    images: "https://rapidhrconnect.com/images/meta.png",
+  },
+};
+
+const HRDocumentation = async () => {
+  const tp = await getTranslations("servicePackages");
+  const t = await getTranslations("hrDocumentation");
+  
+  const keyBenefits = getKeyBenefits(t);
+  const services = getServices(t);
+  const packages = getPackages(tp);
+
+  return (
+    <>
+      <ServiceHero
+        title={`${t('hero.title.0', {fallback: "HR"})} <span>${t('hero.title.1', {fallback: "Documentation"})}</span>`}
+        subtitle={
+          t('hero.subtitle', {fallback: "Comprehensive, compliant, and customised HR documentation that ensures your business operates smoothly and meets all regulatory requirements."})
+        }
+        info={
+          t('hero.info', {fallback: "Effective HR documentation is the backbone of any well-managed organisation. It ensures compliance with legal standards, supports consistent HR practices, and provides clarity for employees and management. Our HR Documentation service offers expertly crafted documents tailored to your business needs, helping you maintain a well-organised and legally compliant workplace. Rapid HR Connect provides the tools to keep your HR processes running smoothly, from employee handbooks to performance review templates."})
+        }
+        image={"/images/services/hrdocsHero.png"}
+      />
+      <KeyBenefits benefits={keyBenefits} />
+      <ServicesLoop services={services} category={t('loop', {fallback: "HR Documentation"})} />
+      <Packages title={t('packages', {fallback: "HR Support Packages"})} packages={packages} />
+      <ServicePricing
+        text={
+          t('pricing', {fallback: "Interested in our HR Documentation services? <br/>Download our detailed pricing guide to explore how we can provide customised, compliant, and efficient documentation solutions for your business."})
+        }
+      />
+      <BookConsultation
+        title={t('bookConsultation.title', {fallback: "Ready to Take the Next Step?"})}
+        text={
+          t('bookConsultation.text', {fallback: "Keep your HR processes compliant and organised with our <br/>expert HR Documentation services. Contact us today to discuss <br/>how we can tailor our documentation to meet your needs."})
+        }
+      />
+    </>
+  );
+};
+
+export default HRDocumentation;

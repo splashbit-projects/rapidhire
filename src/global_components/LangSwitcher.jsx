@@ -1,35 +1,22 @@
+import { usePathname, useRouter } from "next/navigation";
 import Script from "next/script";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const LangSwitcher = () => {
-  const [currentLang, setCurrentLang] = useState("zh-CN");
+  const [currentLang, setCurrentLang] = useState("en");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleLanguageChange = (language, languageCode) => {
-    const retryDispatchEvent = (attempts = 10) => {
-      const select = document.querySelector(".goog-te-combo");
-      if (select) {
-        select.value = language;
-        const changeEvent = new Event("change", {
-          bubbles: true,
-          cancelable: true,
-        });
-        select.dispatchEvent(changeEvent);
+  const router = useRouter();
+  const pathname = usePathname();
 
-        if (document.documentElement.lang === language || attempts <= 1) {
-          setCurrentLang(languageCode);
-          setIsDropdownOpen(false);
-          return;
-        }
-      }
-
-      if (attempts > 1) {
-        setTimeout(() => retryDispatchEvent(attempts - 1), 100);
-      }
-    };
-
-    retryDispatchEvent();
-  };
+  const handleLanguageChange = useCallback(
+    (newLocale) => {
+      const cleanPath = pathname.replace(/^\/[a-zA-Z-]+/, "");
+      router.replace(`/${newLocale}${cleanPath}`);
+      setCurrentLang(newLocale);
+    },
+    [pathname, router]
+  );
 
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
@@ -69,7 +56,7 @@ const LangSwitcher = () => {
           }}
         >
           <li
-            onClick={() => handleLanguageChange("en", "EN")}
+            onClick={() => handleLanguageChange("en")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -88,7 +75,7 @@ const LangSwitcher = () => {
             English
           </li>
           <li
-            onClick={() => handleLanguageChange("de", "DE")}
+            onClick={() => handleLanguageChange("de")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -107,7 +94,7 @@ const LangSwitcher = () => {
             German
           </li>
           <li
-            onClick={() => handleLanguageChange("it", "IT")}
+            onClick={() => handleLanguageChange("it")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -126,7 +113,7 @@ const LangSwitcher = () => {
             Italian
           </li>
           <li
-            onClick={() => handleLanguageChange("zh-CN", "zh-CN")}
+            onClick={() => handleLanguageChange("zh")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -146,28 +133,6 @@ const LangSwitcher = () => {
           </li>
         </ul>
       )}
-
-      <Script
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        onLoad={() => {
-          const googleTranslateElementInit = () => {
-            new window.google.translate.TranslateElement(
-              { pageLanguage: "en" },
-              "google_translate_element"
-            );
-
-            setTimeout(() => {
-              const select = document.querySelector(".goog-te-combo");
-              if (select) {
-                select.value = "zh-CN";
-                select.dispatchEvent(new Event("change", { bubbles: true }));
-              }
-            }, 500)
-          };
-          window.googleTranslateElementInit = googleTranslateElementInit;
-        }}
-      />
-      <div id="google_translate_element" style={{ display: "none" }}></div>
     </div>
   );
 };

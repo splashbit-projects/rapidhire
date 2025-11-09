@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { join } from "node:path";
 
 export async function getPost(slug, locale) {
   let fileSlug = slug;
@@ -8,9 +9,12 @@ export async function getPost(slug, locale) {
     fileSlug = `IT-${slug}`;
   } else if (locale === "de") {
     fileSlug = `DE-${slug}`;
+  } else if (locale === 'zh') {
+    fileSlug = `ZH-${slug}`;
   }
 
-  const text = await readFile(`./src/lib/blog/${fileSlug}.md`, "utf8");
+  // `./src/lib/blog/${fileSlug}.md`, "utf8"
+  const text = await readFile(join(process.cwd(), 'src/lib/blog', `${fileSlug}.md` ), 'utf8');
   const {
     content,
     data: { title, excerpt, seo_title, seo_description, thumbnail },
@@ -28,7 +32,7 @@ export async function getPost(slug, locale) {
 }
 
 export async function getSlugs() {
-  const files = await readdir("./src/lib/blog");
+  const files = await readdir(join(process.cwd(), 'src/lib/blog'));
   return files
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.slice(0, -".md".length));
@@ -40,9 +44,11 @@ export async function getPage(slug, locale) {
     fileSlug = `IT-${slug}`;
   } else if (locale === "de") {
     fileSlug = `DE-${slug}`;
+  } else if (locale === 'zh') {
+    fileSlug = `ZH-${slug}`;
   }
 
-  const text = await readFile(`./src/lib/policies/${fileSlug}.md`, "utf8");
+  const text = await readFile(join(process.cwd(), 'src/lib/policies', `${fileSlug}.md` ), 'utf8');
   const {
     content,
     data: { title, date },
@@ -52,7 +58,7 @@ export async function getPage(slug, locale) {
 }
 
 export async function getPageSlugs() {
-  const files = await readdir("./src/lib/policies/");
+  const files = await readdir(join(process.cwd(), 'src/lib/policies'));
   return files
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.slice(0, -".md".length));
