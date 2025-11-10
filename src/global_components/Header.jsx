@@ -4,11 +4,12 @@ import "@/styles/header.scss";
 import { usePathname } from "next/navigation";
 import {Link as NavLink} from "@/i18n/navigation";
 import LangSwitcher from "./LangSwitcher";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
 
   const t = useTranslations("header");
 
@@ -37,7 +38,7 @@ const Header = () => {
             </NavLink>
 
             <div className="header-right">
-              <LangSwitcher />
+              <LangSwitcher locale={locale} />
               <span onClick={() => menuOpen()} className="menu-btn">
                 {!menuOpened ? (
                   <img src="/images/menu-buger.svg" alt="menu-buger" />
