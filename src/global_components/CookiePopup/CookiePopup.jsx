@@ -6,9 +6,11 @@ import { useEffect, useState } from 'react';
 import st from './CookiePopup.module.scss';
 import cn from 'classnames';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export const CookiePopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const t = useTranslations('cookiePopup');
 
   useEffect(() => {
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
@@ -31,20 +33,20 @@ export const CookiePopup = () => {
         [st.visible]: isVisible,
       })}
     >
-      <h2>Cookie settings</h2>
+      <h2>{t('title', {fallback: 'Cookie settings'})}</h2>
       <p>
-      Cookies help us improve our website. By clicking 'Accept,' you agree to our use of cookies for functionality, analytics, and personalized content. Learn more in our Cookie Policy.{' '}
+        {t('text', {fallback: 'Cookies help us improve our website. By clicking \'Accept,\' you agree to our use of cookies for functionality, analytics, and personalized content. Learn more in our'})}{' '}
         <Link href="/cookie-policy" className={st.link}>
-          Cookie Policy
+          {t('link', {fallback: 'Cookie Policy'})}
         </Link>
         .
       </p>
       <div className={st.buttons}>
         <button onClick={handleAccept} className={st.decline}>
-          Decline
+          {t('decline', {fallback: 'Decline'})}
         </button>
         <button onClick={handleAccept} className={st.accept}>
-          Accept
+          {t('accept', {fallback: 'Accept'})}
         </button>
       </div>
     </div>

@@ -1,9 +1,9 @@
+import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import Script from "next/script";
 import { useCallback, useState } from "react";
 
-const LangSwitcher = () => {
-  const [currentLang, setCurrentLang] = useState("en");
+const LangSwitcher = ({locale = 'en'}) => {
+  const [currentLang, setCurrentLang] = useState(locale);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const router = useRouter();
