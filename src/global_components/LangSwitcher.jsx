@@ -13,6 +13,10 @@ const LangSwitcher = () => {
     if (normalized === "zh-cn" || normalized === "zh_cn") {
       return "zh-CN";
     }
+    // Для китайської мови (zh) залишаємо нижній регістр
+    if (normalized === "zh") {
+      return "zh";
+    }
     // Для інших мов перетворюємо на uppercase
     return normalized.toUpperCase();
   };
