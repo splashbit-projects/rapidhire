@@ -138,7 +138,7 @@ const LangSwitcher = () => {
             Italian
           </li>
           <li
-            onClick={() => handleLanguageChange("zh-CN", "zh-CN")}
+            onClick={() => handleLanguageChange("zh", "zh")}
             style={{
               padding: "7px 0",
               cursor: "pointer",
@@ -149,7 +149,7 @@ const LangSwitcher = () => {
             }}
           >
             <img
-              src={`/images/${getFlagPath("zh-CN")}.svg`}
+              src={`/images/${getFlagPath("zh")}.svg`}
               style={{
                 width: "28px",
               }}
