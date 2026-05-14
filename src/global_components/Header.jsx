@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import "@/styles/header.scss";
 import { usePathname } from "next/navigation";
 import {Link as NavLink} from "@/i18n/navigation";
-import LangSwitcher from "./LangSwitcher";
 import { useLocale, useTranslations } from "next-intl";
 
 const Header = () => {
@@ -38,7 +37,6 @@ const Header = () => {
             </NavLink>
 
             <div className="header-right">
-              <LangSwitcher locale={locale} />
               <span onClick={() => menuOpen()} className="menu-btn">
                 {!menuOpened ? (
                   <img src="/images/menu-buger.svg" alt="menu-buger" />
