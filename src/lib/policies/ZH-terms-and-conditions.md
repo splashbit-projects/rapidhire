@@ -121,5 +121,4 @@ Rapid HR Connect 不对任何网站内容、代码或不准确之处负责。网
 如有关于本条款与条件的任何问题或疑虑，请联系 Rapid HR Connect：
 
 - **电子邮件：** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **电话：** [+85230011568](tel:+85230011568)
 - **网站：** [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)

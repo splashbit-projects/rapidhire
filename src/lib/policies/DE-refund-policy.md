@@ -39,7 +39,6 @@ Sobald wir Ihren Erstattungsantrag erhalten, wird unser Team die bereitgestellte
 Wenn Sie Fragen haben oder weitere Erläuterungen zu unserer Rückgaberechtlinie benötigen, können Sie sich gerne an unser Kundensupport-Team wenden:
 
 - **E-Mail:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Telefon:** [+85230011568](tel:+85230011568)
 - **Kontaktformular:** Verfügbar auf unserer Website unter [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
 
 ## Richtlinienupdates und -überarbeitungen

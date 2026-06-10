@@ -35,9 +35,9 @@ const Footer = () => {
                   info@rapidhrconnect.com
                 </Link>
               </div>
-              <div>
+              {/**<div>
                 {t("phone", {fallback: "Phone:"})}{' '}<Link href="tel:+85230011568">+85230011568</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div>

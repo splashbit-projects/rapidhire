@@ -39,7 +39,6 @@ Una volta ricevuta la tua richiesta di rimborso, il nostro team esaminerà atten
 Se hai domande o necessiti di ulteriori chiarimenti riguardo la nostra Politica di Rimborso, non esitare a contattare il nostro team di supporto clienti:
 
 - **Email:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Telefono:** [+85230011568](tel:+85230011568)
 - **Modulo di Contatto:** Disponibile sul nostro sito web all'indirizzo [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
 
 ## Aggiornamenti e Revisioni della Politica

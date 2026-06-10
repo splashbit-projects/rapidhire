@@ -88,5 +88,4 @@ Diese Cookie-Richtlinie kann regelmäßig aktualisiert werden, um Änderungen in
 Wenn Sie Fragen oder Bedenken bezüglich unserer Cookie-Richtlinie haben, kontaktieren Sie Rapid HR Connect bitte über die folgenden Kanäle:
 
 - **E-Mail:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Telefon:** [+85230011568](tel:+85230011568)
 - **Kontaktformular:** Verfügbar auf unserer Website unter [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)

@@ -39,7 +39,6 @@ date: "2024年8月22日"
 如果您对我们的退款政策有任何疑问或需要进一步澄清，请随时联系我们的客户支持团队：
 
 - **电子邮件：** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **电话：** [+85230011568](tel:+85230011568)
 - **联系表格：** 可在我们的网站上获取，网址为 [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
 
 ## 政策更新与修订

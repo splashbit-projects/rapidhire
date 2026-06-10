@@ -88,5 +88,4 @@ Rapid HR Connect可能使用第三方服务，例如Google Analytics和社交媒
 如果您对我们的Cookie政策有任何疑问或疑虑，请通过以下渠道联系Rapid HR Connect：
 
 - **电子邮件:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **电话:** [+85230011568](tel:+85230011568)
 - **联系表格:** 请在我们的网站上访问 [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)

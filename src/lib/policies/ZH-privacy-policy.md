@@ -111,5 +111,4 @@ Rapid HR Connect 致力于遵守《通用数据保护条例》（GDPR），该�
 如有关于本隐私政策的任何问题或疑虑，请联系 Rapid HR Connect：
 
 - **电子邮件：** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **电话：** [+85230011568](tel:+85230011568)
 - **网站：** [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)

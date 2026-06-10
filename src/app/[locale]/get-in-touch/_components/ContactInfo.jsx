@@ -62,10 +62,10 @@ const ContactInfo = () => {
           </div> */}
         </div>
         <div className="contact-info__bottom">
-          <Link href="tel:+85230011568">
+          {/**<Link href="tel:+85230011568">
             <img src="/images/contact/phone.svg" />
             <span>+85230011568</span>
-          </Link>
+          </Link> */}
           <Link href="mailto:info@rapidhrconnect.com">
             <img src="/images/contact/mail.svg" />
             <span>info@rapidhrconnect.com</span>

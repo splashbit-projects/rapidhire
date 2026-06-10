@@ -111,5 +111,4 @@ Ai sensi del GDPR, hai il diritto di accedere, aggiornare, recuperare e cancella
 Per qualsiasi domanda o preoccupazione riguardante questa Informativa sulla Privacy, si prega di contattare Rapid HR Connect:
 
 - **Email:** [info@rapidhrconnect.com](mailto:info@rapidhrconnect.com)
-- **Telefono:** [+85230011568](tel:+85230011568)
 - **Sito Web:** [https://rapidhrconnect.com/get-in-touch](https://rapidhrconnect.com/get-in-touch)
