@@ -3,8 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
 import Dots from "@/icons/Dots";
-import Link from "next/link";
 import RequestForm from "@/global_components/RequestForm";
+import { useTranslations } from "next-intl";
 
 const ContactUs = () => {
   const t = useTranslations("contact.us");
