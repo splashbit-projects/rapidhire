@@ -16,7 +16,7 @@ Diese Allgemeinen Geschäftsbedingungen stellen eine rechtlich bindende Vereinba
 Für diese Allgemeinen Geschäftsbedingungen sind bestimmte Begriffe wie folgt definiert:
 
 - **Cookies:** Kleine Datenstücke, die von einer Website generiert und von Ihrem Webbrowser gespeichert werden, typischerweise verwendet, um Ihren Browser zu identifizieren, Analysen bereitzustellen und Ihre Präferenzen oder Anmeldeinformationen zu speichern.
-- **Unternehmen:** Wenn dieses Dokument „Unternehmen“, „wir“, „uns“ oder „unser“ erwähnt, bezieht es sich auf Rapidhire LTD, eingetragene Adresse: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hongkong, Büroadresse: Office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hongkong, und Registrierungsnummer 70354637, die für Ihre Informationen im Sinne dieser Allgemeinen Geschäftsbedingungen verantwortlich ist.
+- **Unternehmen:** Wenn dieses Dokument „Unternehmen“, „wir“, „uns“ oder „unser“ erwähnt, bezieht es sich auf Rapidhire LTD, eingetragene Adresse: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hongkong, Büroadresse: Office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hongkong, und Registrierungsnummer 76761181, die für Ihre Informationen im Sinne dieser Allgemeinen Geschäftsbedingungen verantwortlich ist.
 - **Land:** Der Gerichtsstand, in dem Rapid HR Connect oder seine Gründer ansässig sind, in diesem Fall Hongkong.
 - **Gerät:** Jedes internetfähige Gerät wie ein Smartphone, Tablet, Computer oder andere Geräte, die verwendet werden können, um Rapid HR Connect zu besuchen und auf seine Dienste zuzugreifen.
 - **Dienst:** Bezieht sich auf die von Rapid HR Connect erbrachten Dienste, wie in diesen Allgemeinen Geschäftsbedingungen und auf unserer Plattform beschrieben.

@@ -10,7 +10,7 @@ Rapid HR Connect („wir“, „unser“ oder „uns“) verpflichtet sich, Ihre
 ## Definitionen und Schlüsselbegriffe
 
 - **Cookies:** Kleine Datenstücke, die von einer Website generiert und von Ihrem Webbrowser gespeichert werden. Sie dienen dazu, Ihren Browser zu identifizieren, Analysen bereitzustellen und Informationen wie Ihre Spracheinstellungen oder Anmeldedaten zu speichern.
-- **Unternehmen:** Wenn diese Richtlinie „Unternehmen“, „wir“, „uns“ oder „unser“ erwähnt, bezieht sie sich auf Rapidhire LTD, eingetragene Adresse: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hongkong, Büroadresse: Office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hongkong, und Registrierungsnummer 70354637, die für Ihre Informationen im Sinne dieser Datenschutzrichtlinie verantwortlich ist.
+- **Unternehmen:** Wenn diese Richtlinie „Unternehmen“, „wir“, „uns“ oder „unser“ erwähnt, bezieht sie sich auf Rapidhire LTD, eingetragene Adresse: Rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hongkong, Büroadresse: Office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hongkong, und Registrierungsnummer 76761181, die für Ihre Informationen im Sinne dieser Datenschutzrichtlinie verantwortlich ist.
 - **Land:** In diesem Fall der Gerichtsstand, in dem Rapid HR Connect oder seine Gründer ansässig sind, Hongkong.
 - **Kunde:** Bezieht sich auf die Gesellschaft oder Person, die sich für die Nutzung der Dienste von Rapid HR Connect registriert, um Beziehungen zu ihren Kunden oder Dienstnutzern zu verwalten.
 - **Gerät:** Jedes internetfähige Gerät, wie ein Smartphone, Tablet oder Computer, das für den Zugriff auf Rapid HR Connect und seine Dienste verwendet wird.

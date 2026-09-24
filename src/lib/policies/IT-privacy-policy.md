@@ -10,7 +10,7 @@ Rapid HR Connect ("noi", "nostro") si impegna a proteggere la tua privacy. Quest
 ## Definizioni e Termini Chiave
 
 - **Cookie:** Piccoli frammenti di dati generati da un sito web e memorizzati dal tuo browser web, utilizzati per identificare il tuo browser, fornire analisi e ricordare informazioni come le tue preferenze linguistiche o i dettagli di accesso.
-- **Azienda:** Quando questa politica menziona "Azienda", "noi", "ci" o "nostro", si riferisce a Rapidhire LTD, indirizzo registrato: rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hong Kong, indirizzo ufficio: office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hong Kong, e numero di registrazione 70354637, che è responsabile delle tue informazioni ai sensi di questa Informativa sulla Privacy.
+- **Azienda:** Quando questa politica menziona "Azienda", "noi", "ci" o "nostro", si riferisce a Rapidhire LTD, indirizzo registrato: rooms 1703-1704, 17/F Tung Chiu Comm Ctr, 193 Lockhart Rd, Wan Chai, Hong Kong, indirizzo ufficio: office number 245, 8/FL, 28 Yee Wo St Causeway Bay, Hong Kong, e numero di registrazione 76761181, che è responsabile delle tue informazioni ai sensi di questa Informativa sulla Privacy.
 - **Paese:** In questo caso, la giurisdizione in cui Rapid HR Connect o i suoi fondatori hanno sede è Hong Kong.
 - **Cliente:** Si riferisce all'entità o individuo che si registra per utilizzare i servizi di Rapid HR Connect per gestire le relazioni con i propri clienti o utenti del servizio.
 - **Dispositivo:** Qualsiasi dispositivo connesso a Internet, come smartphone, tablet o computer, utilizzato per accedere a Rapid HR Connect e ai suoi servizi.
